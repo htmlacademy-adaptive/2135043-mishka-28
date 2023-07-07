@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка</title>
+</head>
+
+<body class="page__body">
+  <div class="page__wrapper">
+    <header class="main-header">
+      <div class="main-header__wrapper">
+        <a class="main-header__logo" href="index.html"
+          aria-label="Сайт магазина вязаных изделий для дома и не только - главная страница">
+          <svg class="main-header__logo-icon"></svg>
+        </a>
+        <nav class="main-header__navigation main-navigation main-navigation--closed main-navigation--nojs">
+          <button class="main-navigation__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item">
+              <a class="main-navigation__link link link--current" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link link" href="form.html">Вязание на заказ</a>
+            </li>
+          </ul>
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item">
+              <a class="main-navigation__link link" href="#">Поиск по сайту</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link link" href="#">Корзина пока пуста</a>
+            </li>
+          </ul>
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item">
+              <a class="main-navigation__link link" href="catalog.html">Новые поступления</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link link" href="catalog.html">Распродажа</a>
+            </li>
+            <li class="main-navigation__item">
+              <span class="main-navigation__bonus">Бесплатная доставка по России</span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main-order">
+      <h1 class="visually-hidden">Заполните форму для заказа нестандартной продукции магазина Mishka</h1>
+      <div class="main-order__wrapper">
+        <section class="main-order__information">
+          <header class="main-order__header">
+            <h2 class="main-order__title title">Вязание на заказ</h2>
+            <p class="main-order__description description">Мы будем рады воплотить в жизнь ваши пожелания!
+            Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+          </header>
+          <form class="main-order__about order-form" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="order-form__field fieldset-information">
+              <h3 class="fieldset-information__title title">Тип</h3>
+              <ul class="fieldset-information__list fieldset-information__list--radio">
+                <li class="fieldset-information__item">
+                  <label class="fieldset-information__control">
+                    <input class="visually-hidden fieldset-information__control-input" type="radio" name="accessories"
+                      value="accessories" checked="checked">
+                    <span class="fieldset-information__control-mark fieldset-information__control-mark--radio"></span>
+                    <span class="fieldset-information__control-label fieldset-information__control-label--radio">Аксессуар для интерьера</span>
+                  </label>
+                </li>
+                <li class="fieldset-information__item">
+                  <label class="fieldset-information__control">
+                    <input class="visually-hidden fieldset-information__control-input" type="radio" name="toys"
+                      value="toys">
+                    <span class="fieldset-information__control-mark fieldset-information__control-mark--radio"></span>
+                    <span class="fieldset-information__control-label fieldset-information__control-label--radio">Детская игрушка</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="order-form__field fieldset-information">
+              <h3 class="fieldset-information__title title">Цвет</h3>
+              <ul class="fieldset-information__list fieldset-information__list--checkbox">
+                <li class="fieldset-information__item">
+                  <label class="fieldset-information__control">
+                    <input class="visually-hidden fieldset-information__control-input" type="checkbox" name="white"
+                      checked="checked">
+                    <span class="fieldset-information__control-mark fieldset-information__control-mark--checkbox"></span>
+                    <span class="fieldset-information__control-label">Белый</span>
+                  </label>
+                </li>
+                <li class="fieldset-information__item">
+                  <label class="fieldset-information__control">
+                    <input class="visually-hidden fieldset-information__control-input" type="checkbox" name="gray" checked="checked">
+                    <span class="fieldset-information__control-mark fieldset-information__control-mark--checkbox"></span>
+                    <span class="fieldset-information__control-label">Серый</span>
+                  </label>
+                </li>
+                <li class="fieldset-information__item">
+                  <label class="fieldset-information__control">
+                    <input class="visually-hidden fieldset-information__control-input" type="checkbox" name="tiffany">
+                    <span class="fieldset-information__control-mark fieldset-information__control-mark--checkbox"></span>
+                    <span class="fieldset-information__control-label">Тиффани</span>
+                  </label>
+                </li>
+                <li class="fieldset-information__item">
+                  <label class="fieldset-information__control">
+                    <input class="visually-hidden fieldset-information__control-input" type="checkbox" name="black">
+                    <span class="fieldset-information__control-mark fieldset-information__control-mark--checkbox"></span>
+                    <span class="fieldset-information__control-label">Черный</span>
+                  </label>
+                </li>
+                <li class="fieldset-information__item">
+                  <label class="fieldset-information__control">
+                    <input class="visually-hidden fieldset-information__control-input" type="checkbox" name="pink">
+                    <span class="fieldset-information__control-mark fieldset-information__control-mark--checkbox"></span>
+                    <span class="fieldset-information__control-label">Розовый</span>
+                  </label>
+                </li>
+                <li class="fieldset-information__item">
+                  <label class="fieldset-information__control">
+                    <input class="visually-hidden fieldset-information__control-input" type="checkbox" name="orange">
+                    <span class="fieldset-information__control-mark fieldset-information__control-mark--checkbox"></span>
+                    <span class="fieldset-information__control-label">Оранжевый</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="order-form__field fieldset-information">
+              <h3 class="fieldset-information__title title">фио</h3>
+              <div class="fieldset-information__container">
+                <label class="fieldset-information__signature signature" for="name">Имя:
+                </label>
+                <input class="fieldset-information__field field" type="text" id="name" name="name" minlength="2" placeholder="Введите ваше имя*" required>
+              </div>
+              <div class="fieldset-information__container">
+                <label class="fieldset-information__signature signature" for="surname">Фамилия:
+                </label>
+                <input class="fieldset-information__field field" type="text" id="surname" name="surname" minlength="2"
+                  placeholder="Укажите фамилию*" required>
+              </div>
+              <div class="fieldset-information__container">
+                <label class="fieldset-information__signature signature" for="patronymic">Отчество:
+                </label>
+                <input class="fieldset-information__field field" type="text" id="patronymic" name="patronymic" placeholder="Отчество,если желаете">
+              </div>
+            </fieldset>
+            <fieldset class="order-form__field fieldset-information fieldset-information--contacts">
+              <h3 class="visually-hidden">Контактные данные</h3>
+              <div class="fieldset-information__field-wrapper">
+                <div class="fieldset-information__container">
+                  <label class="fieldset-information__signature signature" for="contacts-phone">Тел
+                  </label>
+                  <input class="fieldset-information__field field" type="tel" id="contacts-phone" name="contacts-phone"
+                    placeholder="+7 ХХХ ХХХ ХХ ХХ*" pattern="\+7\ \d{3}\ \d{3}\ \d{2}\ \d{2}" required>
+                  <div class="fieldset-information__icon-wrapper">
+                    <svg class="fieldset-information__icon"></svg>
+                  </div>
+                </div>
+                <div class="fieldset-information__container">
+                  <label class="fieldset-information__signature signature" for="e-mail">E-mail</label>
+                  <input class="fieldset-information__field field" type="email" id="e-mail" name="e-mail"
+                    placeholder="Ваш Email*" required>
+                  <div class="fieldset-information__icon-wrapper">
+                    <svg class="fieldset-information__icon"></svg>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="order-form__field fieldset-information">
+              <label class="fieldset-information__title fieldset-information__title--wishes" for="wishes">Доп
+              </label>
+              <div class="fieldset-information__textarea-wrapper">
+                <textarea class="fieldset-information__textarea field" id="wishes" name="wishes"
+                  placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              </div>
+            </fieldset>
+            <div class="order-form__button-wrapper">
+              <span class="order-form__note note">*Поля обязательны для заполнения</span>
+              <button class="order-form__button button" type="submit">Отправить заказ</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <div class="main-footer__wrapper">
+        <div class="main-footer__logo">
+          <h2 class="visually-hidden">Посетите наш сайт!</h2>
+          <a class="main-footer__link link" href="index.html">
+            <svg class="main-footer__icon"></svg>
+          </a>
+        </div>
+        <div class="main-footer__social">
+          <h2 class="visually-hidden">Давайте дружить!</h2>
+          <ul class="main-footer__list list-network">
+            <li class="list-network__item">
+              <a class="list-network__link link" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">Мы в Вконтакте</span>
+                <div class="list-network__icon-wrapper">
+                  <svg class="list-network__icon">
+                  </svg>
+                </div>
+              </a>
+            </li>
+            <li class="list-network__item">
+              <a class="list-network__link link" href="https://t.me/htmlacademy">
+                <span class="visually-hidden">Мы в Телеграмме</span>
+                <div class="list-network__icon-wrapper">
+                  <svg class="list-network__icon">
+                  </svg>
+                </div>
+              </a>
+            </li>
+            <li class="list-network__item">
+              <a class="list-network__link link" href="https://www.youtube.com/user/htmlacademyru">
+                <span class="visually-hidden">Мы в Ютюбе</span>
+                <div class="list-network__icon-wrapper">
+                  <svg class="list-network__icon">
+                  </svg>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="main-footer__copyright copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано
+            <span class="visually-hidden">Сайт разработчика - HTML Academy</span>
+            <svg class="copyright__icon">
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/script.js">
+    </script>
+  </div>
+</body>
+
+</html>
