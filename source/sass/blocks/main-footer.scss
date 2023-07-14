@@ -1,0 +1,15 @@
+.main-footer {
+  width: 100%;
+  min-height: 160px;
+  flex-grow: 1;
+  background-color: $gray;
+}
+
+.main-footer__wrapper {
+  width: 100%;
+  min-height: 160px;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}

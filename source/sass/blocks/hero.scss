@@ -1,0 +1,65 @@
+.hero {
+  width: 100%;
+  min-height: 500px;
+  background-image: url("../img/hero/hero-picture.jpg");
+  background-repeat: no-repeat;
+  background-size: 568px 369px;
+  background-position: top center;
+}
+
+.hero__wrapper {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero__title {
+  text-align: center;
+  padding: 73px 30px 120px;
+}
+
+.hero__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  list-style-type: none;
+  margin-block: 0;
+  padding-inline: 0;
+}
+
+.hero-item {
+  display: block;
+  min-width: 320px;
+  min-height: 103px;
+}
+
+.hero__link {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 84px;
+  justify-content: space-between;
+  min-width: 320px;
+  min-height: 103px;
+  padding: 21px 27px 18px 30px;
+}
+
+.hero__catalog {
+  width: min-content;
+  padding: 1px 0 13px;
+}
+
+.hero__icon-lamp {
+  display: block;
+  margin: 2px 9px 0 0;
+  opacity: 0.5;
+}
+
+.hero__icon-toys {
+  display: block;
+  margin-bottom: 4px;
+  opacity: 0.5;
+}

@@ -1,1 +1,36 @@
-// Начните писать стили здесь
+//базовые свойства
+@import "./base/fonts.scss";
+@import "./base/global.scss";
+
+//переменные
+@import "./base/variables.scss";
+
+//блоки
+@import "./blocks/logotype.scss";
+@import "./blocks/note.scss";
+@import "./blocks/visually-hidden.scss";
+@import "./blocks/field.scss";
+@import "./blocks/title.scss";
+@import "./blocks/link.scss";
+@import "./blocks/button.scss";
+@import "./blocks/description.scss";
+@import "./blocks/copyright.scss";
+@import "./blocks/fieldset-information.scss";
+@import "./blocks/order-form.scss";
+@import "./blocks/modal-container.scss";
+@import "./blocks/video-about.scss";
+@import "./blocks/product-card.scss";
+@import "./blocks/product-catalog.scss";
+@import "./blocks/list-network.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/reviews-slider.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/promo.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/main-navigation.scss";
+@import "./blocks/main-footer.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/main-order.scss";
+@import "./blocks/main-inner.scss";
+@import "./blocks/main-index.scss";
+@import "./blocks/page.scss";

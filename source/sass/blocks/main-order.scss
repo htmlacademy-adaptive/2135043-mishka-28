@@ -1,0 +1,31 @@
+.main-order {
+  width: 100%;
+}
+
+.main-order__wrapper {
+  width: 100%;
+}
+
+.main-order__information {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.main-order__header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.main-order__title {
+  min-width: 320px;
+  padding: 74px 22px;
+  background-color: $gray;
+  text-align: center;
+}
+
+.main-order__description {
+  min-width: 320px;
+  padding: 17px 30px 10px;
+}

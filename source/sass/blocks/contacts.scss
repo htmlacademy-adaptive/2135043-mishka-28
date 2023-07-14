@@ -1,0 +1,84 @@
+.contacts {
+  width: 100%;
+}
+
+.contacts__container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.contacts__information {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 28px;
+  padding: 44px 30px 62px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 6px;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background: url("../img/stack/zigzag-line-desktop.svg.svg") no-repeat center / cover;
+  }
+}
+
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-block: 0;
+  padding-inline: 0;
+  list-style-type: none;
+}
+
+.contacts__item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.contacts__item-name {
+  margin: 0;
+}
+
+.contacts__address {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.contacts__item-description {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-block: 0;
+  padding-inline: 0;
+}
+
+.contacts__map-wrapper {
+  display: block;
+  width: 100%;
+  min-height: 454px;
+}
+
+.contacts__map {
+  display: block;
+  border: 0;
+  width: 100%;
+  min-height: 454px;
+  cursor: pointer;
+}
+
+.contacts__button-wrapper {
+  padding: 42px 30px 39px;
+}

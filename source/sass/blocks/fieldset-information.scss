@@ -1,0 +1,198 @@
+.fieldset-information {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  margin-inline: 0;
+  padding-inline: 0;
+  padding-block: 0;
+  border: none;
+}
+
+.fieldset-information__title {
+  display: flex;
+  gap: 24px;
+  min-width: 260px;
+  padding: 9px 0 15px;
+}
+
+.fieldset-information__signature {
+  display: flex;
+  gap: 26px;
+}
+
+.fieldset-information__text-wrapper {
+  display: block;
+  background-color: $white;
+  z-index: 2;
+
+  &--mail {
+    min-width: 60px;
+  }
+}
+
+.fieldset-information__line {
+  @media (max-width: $mobile-width-only) {
+    display: block;
+    width: 100%;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $tiffany-link;
+    }
+  }
+}
+
+.fieldset-information__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  margin-block: 0;
+  padding-inline: 0;
+  list-style-type: none;
+}
+
+.fieldset-information__list--radio {
+  gap: 24px;
+  padding: 15px 0 34px;
+}
+
+.fieldset-information__list--checkbox {
+  gap: 43px;
+  padding: 20px 0 34px;
+}
+
+.fieldset-information__control {
+  position: relative;
+  display: block;
+  padding-left: 60px;
+}
+
+.fieldset-information__control-mark {
+  position: absolute;
+  content: "";
+  top: -10px;
+  left: 0;
+  width: 38px;
+  height: 38px;
+  outline: 2px solid $dark-gray;
+  background-color: $white;
+}
+
+.fieldset-information__control-mark--radio {
+  border-radius: 50%;
+}
+
+.fieldset-information__control-mark--radio-big {
+  top: -3px;
+}
+
+.fieldset-information__control-input[type="radio"]:checked + .fieldset-information__control-mark--radio {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $tiffany-link;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+.fieldset-information__control-input[type="checkbox"]:checked + .fieldset-information__control-mark--checkbox {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 23px;
+    height: 16px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: url("../img/stack/icon-checkbox.svg") no-repeat center center / cover;
+  }
+}
+
+.fieldset-information__list--name {
+  gap: 22px;
+  padding: 14px 0 26px;
+}
+
+.fieldset-information__list--contacts {
+  gap: 35px;
+  padding: 9px 0 26px;
+}
+
+.fieldset-information__item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.fieldset-information__item--contacts {
+  position: relative;
+}
+
+
+.fieldset-information__signature--uppercase {
+  text-transform: uppercase;
+}
+
+.fieldset-information__signature--tiffany {
+  color: $tiffany-button;
+}
+
+.fieldset-information__icon-wrapper {
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 24px;
+  bottom: 17px;
+  right: 7px;
+}
+
+.fieldset-information__icon-wrapper--email {
+  width: 32px;
+  height: 21px;
+  bottom: 15px;
+  right: 3px;
+}
+
+.fieldset-information__icon {
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 24px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: $black;
+  opacity: 20%;
+}
+
+.fieldset-information__icon--email {
+  width: 32px;
+  height: 21px;
+}
+
+.fieldset-information__textarea-wrapper {
+  padding: 8px 0 7px;
+}

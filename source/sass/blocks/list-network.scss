@@ -1,0 +1,37 @@
+.list-network {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 29px;
+  width: 260px;
+  min-height: 80px;
+  margin-block: 0;
+  padding-inline: 0;
+  padding: 25px 59px 28px 59px;
+  list-style-type: none;
+  border-bottom: 1px solid $border;
+}
+
+.list-network__link {
+  display: block;
+  width: 28px;
+  height: 27px;
+  padding: 3px 0 2px;
+}
+
+.list-network__icon-wrapper {
+  position: relative;
+  display: block;
+  width: 28px;
+  height: 22px;
+}
+
+.list-network__icon {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}

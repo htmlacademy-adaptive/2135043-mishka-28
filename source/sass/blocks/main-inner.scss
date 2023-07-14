@@ -1,0 +1,11 @@
+.main-inner {
+  width: 100%;
+}
+
+.main-inner__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0 auto;
+}

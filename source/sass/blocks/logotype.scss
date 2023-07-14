@@ -1,0 +1,31 @@
+.logotype {
+  display: block;
+  position: relative;
+  width: 320px;
+  height: 80px;
+  padding: 22px 118px 22px 116px;
+  color: $black;
+  background-color: $white;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 86px;
+    height: 35px;
+    background: url("../img/stack/mishka-logo-line.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+  }
+}
+
+.logotype__icon {
+  display: block;
+  width: 86px;
+  height: 30px;
+}
