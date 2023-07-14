@@ -1,0 +1,18 @@
+.main-header {
+  min-width: 320px;
+  min-height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  border-bottom: 1px solid $light-gray;
+}
+
+.main-header__wrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,37 @@
+.reviews-slider {
+  width: 100%;
+}
+
+.reviews-slider__wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 14px;
+  padding: 13px 30px 14px;
+}
+
+.reviews-slider__description {
+  margin-block: 0;
+  margin-bottom: 19px;
+  text-align: left;
+}
+
+.reviews-slider__about-author {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  color: $black;
+}
+
+.reviews-slider__author-name {
+  margin-block: 0;
+}
+
+.reviews-slider__controls {
+  display: flex;
+  flex-wrap: wrap;
+  width: 260px;
+  height: 52px;
+}

@@ -1,0 +1,35 @@
+.field {
+  display: block;
+  min-width: 260px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 18px;
+  padding: 17px 0;
+  border: none;
+  box-shadow: 0 -2px 0 0 $black inset;
+  background-color: $white;
+  resize: none;
+  transition: outline 0.5s;
+
+  &::placeholder {
+    color: $black;
+    opacity: 30%;
+  }
+
+  &--phone {
+    padding: 14px 35px 20px 0;
+  }
+
+  &--email {
+    padding: 16px 38px 18px 0;
+  }
+
+  &--textarea {
+    min-width: 260px;
+    min-height: 142px;
+    padding: 17px;
+    border: 2px solid $dark-gray;
+    box-shadow: none;
+  }
+}

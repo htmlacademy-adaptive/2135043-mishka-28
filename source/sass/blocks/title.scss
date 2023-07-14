@@ -1,0 +1,29 @@
+.title {
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-block: 0;
+  padding-inline: 0;
+  color: $black;
+
+  &--small {
+    font-size: 25px;
+  }
+
+  &--subtitle {
+    font-size: 17px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $tiffany;
+  }
+
+  &--subtitle-small {
+    line-height: 16px;
+  }
+
+  &--small-size {
+    font-size: 17px;
+    line-height: 24px;
+  }
+}

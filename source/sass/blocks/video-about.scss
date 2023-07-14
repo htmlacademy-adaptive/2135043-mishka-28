@@ -1,0 +1,99 @@
+.video-about {
+  width: 100%;
+  padding: 0 30px 58px;
+}
+
+.video-about__wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-width: 260px;
+  min-height: 503px;
+  outline: 1px solid $light-gray;
+}
+
+.video-about__information {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-height: 503px;
+  justify-content: space-between;
+}
+
+.video-about__information-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  min-height: 96px;
+  padding: 22px 13px 27px 34px;
+}
+
+.video-about__title {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.video-about__icon-wrapper {
+  display: block;
+  min-width: 32px;
+  height: 48px;
+  padding: 13px 0;
+}
+
+.video-about__description-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 41px;
+  min-height: 257px;
+  padding: 35px 33px 33px 34px;
+}
+
+.video-about__picture-wrapper {
+  position: absolute;
+  min-width: 260px;
+  min-height: 150px;
+  top: 27%;
+  transform: translateY(-27%);
+  left: 0;
+}
+
+.video-about__poster {
+  position: absolute;
+  min-width: 260px;
+  min-height: 150px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.video-about__button {
+  position: absolute;
+  width: 101px;
+  height: 77px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: $tiffany-button;
+  border: 5px solid $white;
+  border-radius: 25%;
+}
+
+.video-about__arrow {
+  position: absolute;
+  content: "";
+  top: 15px;
+  left: 35px;
+  width: 0;
+  height: 0;
+  display: inline-block;
+  border-top: 19px solid transparent;
+  border-bottom: 19px solid transparent;
+  border-left: 30px solid $white;
+}

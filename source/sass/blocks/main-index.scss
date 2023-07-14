@@ -1,0 +1,12 @@
+.main-index {
+  width: 100%;
+  background-color: $white;
+}
+
+.main-index__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 31px;
+  margin: 0 auto;
+}
