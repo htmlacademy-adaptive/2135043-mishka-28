@@ -6,6 +6,11 @@
   background-size: 568px 369px;
   background-position: top center;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero/hero-picture@2x.jpg");
+    background-size: 568px 369px;
+  }
+
   @media (min-width: $tablet-width) {
     min-height: 681px;
     background-size: 1150px 746px;

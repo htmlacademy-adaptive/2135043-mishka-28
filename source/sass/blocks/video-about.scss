@@ -178,6 +178,7 @@
   margin: auto;
   background: url("../img/stack/icon-video-button.svg") no-repeat center center / cover;
   border: none;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     min-width: 102px;
