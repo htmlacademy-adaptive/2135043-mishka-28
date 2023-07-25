@@ -1,21 +1,34 @@
 .list-network {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 29px;
-  width: 260px;
+  min-width: 260px;
   min-height: 80px;
   margin-block: 0;
   padding-inline: 0;
   padding: 25px 59px 28px 59px;
   list-style-type: none;
   border-bottom: 1px solid $border;
+
+  @media (min-width: $tablet-width) {
+    padding: 20px;
+    min-width: 182px;
+    min-height: 74px;
+    border-bottom: none;
+  }
+}
+
+.list-network__item {
+  width: 28px;
+  height: 34px;
+  padding: 4px 0;
 }
 
 .list-network__link {
   display: block;
   width: 28px;
-  height: 27px;
-  padding: 3px 0 2px;
+  height: 26px;
+  padding: 2px 0;
 }
 
 .list-network__icon-wrapper {
@@ -28,7 +41,8 @@
 .list-network__icon {
   position: absolute;
   content: "";
-  display: block;
+  width: 28px;
+  height: 22px;
   top: 0;
   bottom: 0;
   left: 0;

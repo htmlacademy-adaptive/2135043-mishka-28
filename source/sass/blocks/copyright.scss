@@ -1,18 +1,39 @@
 .copyright {
-  width: 100%;
+  min-width: 260px;
   min-height: 80px;
+
+  @media (min-width: $tablet-width) {
+    padding: 20px;
+    min-width: 220px;
+    min-height: 74px;
+  }
 }
 
 .copyright__link {
   display: flex;
-  width: 260px;
+  min-width: 260px;
   min-height: 80px;
   padding: 22px 39px 23px;
   gap: 27px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 180px;
+    min-height: 34px;
+    padding: 0;
+    gap: 25px;
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 28px;
+  }
 }
 
 .copyright__title {
   margin-top: 7px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 8px;
+  }
 }
 
 .copyright__icon {

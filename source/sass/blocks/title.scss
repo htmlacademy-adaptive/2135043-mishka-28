@@ -7,8 +7,29 @@
   padding-inline: 0;
   color: $black;
 
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+
   &--small {
     font-size: 25px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 43px;
+      line-height: 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 53px;
+      line-height: 57px;
+    }
   }
 
   &--subtitle {
@@ -16,6 +37,17 @@
     line-height: 20px;
     text-transform: uppercase;
     color: $tiffany;
+
+    @media (min-width: $tablet-width) {
+      line-height: 17px;
+      width: min-content;
+      text-align: center;
+      padding: 10px 30px 13px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 8px 32px;
+    }
   }
 
   &--subtitle-small {
@@ -25,5 +57,42 @@
   &--small-size {
     font-size: 17px;
     line-height: 24px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+    }
+  }
+
+  &--reviews-author {
+    font-size: 18px;
+    line-height: 24px;
+
+    @media (min-width: $desktop-width) {
+      font-size: 17px;
+    }
+  }
+
+  &--zigzag {
+    @media (min-width: $tablet-width) {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        min-height: 24px;
+        left: 0;
+        bottom: -12px;
+        background: url("../img/stack/zigzag-hero-desktop.svg") no-repeat center center / cover;
+        z-index: 2;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      &::after {
+        min-height: 34px;
+        bottom: -17px;
+      }
+    }
   }
 }

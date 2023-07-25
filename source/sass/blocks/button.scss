@@ -6,30 +6,88 @@
   text-transform: uppercase;
   background-color: $white;
   color: $dark-gray;
-  border: 2px solid $dark-gray;
+  outline: 2px solid $dark-gray;
+  border: none;
   padding: 16px 30px;
   text-align: center;
 
   &--prev {
+    position: relative;
     width: 130px;
     padding: 13px 42px 13px 38px;
+    outline: none;
     border: 1px solid $light-gray;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 48px;
+      height: 4px;
+      top: 23px;
+      left: 40px;
+      background-color: $black;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 88px;
+      padding: 13px 19px;
+      border: none;
+      background-color: $tiffany;
+    }
   }
 
   &--next {
+    position: relative;
     width: 130px;
     padding: 13px 42px 13px 37px;
+    outline: none;
     border: 1px solid $light-gray;
     border-left: 0;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 48px;
+      height: 4px;
+      top: 23px;
+      left: 38px;
+      background-color: $black;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 88px;
+      padding: 13px 19px;
+      border: none;
+      background-color: $tiffany;
+    }
+  }
+
+  &--reviews {
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      width: 175px;
+      padding: 16px 26px;
+      top: 83px;
+      right: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 78px;
+    }
   }
 
   &--contacts {
     display: block;
     min-width: 260px;
+
+    @media (min-width: $tablet-width) {
+      min-width: 230px;
+    }
   }
 
   &--basket {
     position: relative;
+    outline: none;
 
     &::after {
       position: absolute;
@@ -44,9 +102,49 @@
 
   &--order {
     padding: 18px 11px;
+    font-size: 18px;
+    line-height: 16px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 17px;
+    }
   }
 
   &--form {
     min-width: 260px;
+
+    @media (min-width: $tablet-width) {
+      min-width: 230px;
+      padding: 18px 32px;
+      font-size: 17px;
+      line-height: 16px;
+    }
+  }
+
+  &--promo {
+    font-size: 17px;
+    border: none;
+    outline: 2px solid $dark-gray;
+  }
+}
+
+.button__arrow {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-top: 4px solid $black;
+  border-right: 4px solid $black;
+
+  &--prev {
+    top: 16px;
+    left: 42px;
+    transform: rotate(-135deg);
+  }
+
+  &--next {
+    top: 16px;
+    right: 45px;
+    transform: rotate(45deg);
   }
 }

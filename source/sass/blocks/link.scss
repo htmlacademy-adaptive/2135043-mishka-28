@@ -1,9 +1,15 @@
 .link {
+  display: block;
   font-family: "Open Sans Bold", "Arial", sans-serif;
   font-size: 19px;
   line-height: 24px;
   font-weight: 700;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   &--light {
     color: $white;
@@ -24,6 +30,10 @@
     font-weight: 400;
   }
 
+  &--small-font {
+    font-size: 19px;
+  }
+
   &--small-height {
     line-height: 18px;
   }
@@ -40,6 +50,14 @@
       bottom: 0;
       background-color: $tiffany-link;
     }
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
   }
 
   &--search {
@@ -54,6 +72,22 @@
       left: 32px;
       background: url("../img/stack/icon-search.svg") no-repeat center center / cover;
     }
+
+    @media (min-width: $tablet-width) {
+      min-width: 79px;
+      min-height: 88px;
+      padding: 36px 30px 36px 30px;
+      font-size: 17px;
+      line-height: 24px;
+
+      &::after {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
   }
 
   &--basket {
@@ -67,6 +101,79 @@
       top: 31px;
       left: 30px;
       background: url("../img/stack/icon-basket.svg") no-repeat center center / cover;
+    }
+
+    @media (min-width: $tablet-width) {
+      min-width: 79.5%;
+      min-height: 88px;
+      padding: 33px 50px 31px 53px;
+      font-size: 17px;
+      line-height: 24px;
+      text-align: right;
+
+      &::after {
+        top: 35px;
+        left: 31px;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      min-width: 316px;
+    }
+  }
+
+  &--catalog {
+    @media (min-width: $tablet-width) {
+      min-width: 150px;
+      min-height: 44px;
+      padding: 10px;
+      font-size: 15px;
+      line-height: 24px;
+      text-align: left;
+
+      @media (min-width: $desktop-width) {
+        font-size: 17px;
+        min-width: 201px;
+        min-height: 42px;
+        padding: 33px 20px 31px 10px;
+      }
+    }
+  }
+
+  &--knitting {
+    @media (min-width: $tablet-width) {
+      min-width: 150px;
+      min-height: 44px;
+      padding: 10px 9px;
+      font-size: 15px;
+      line-height: 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 17px;
+      min-width: 202px;
+      min-height: 42px;
+      padding: 33px 10px 31px 20px;
+    }
+  }
+
+  &--new {
+    @media (min-width: $desktop-width) {
+      min-width: 179px;
+      min-height: 42px;
+      padding: 9px 10px;
+      font-size: 15px;
+      line-height: 24px;
+    }
+  }
+
+  &--sale {
+    @media (min-width: $desktop-width) {
+      min-width: 130px;
+      min-height: 42px;
+      padding: 9px 10px;
+      font-size: 15px;
+      line-height: 24px;
     }
   }
 }

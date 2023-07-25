@@ -3,23 +3,57 @@
 }
 
 .advantages__wrapper {
-  position: relative;
   width: 100%;
-  padding: 37px 30px 14px;
+  padding: 37px 30px 14px 24px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   gap: 28px;
+  margin: 0 auto;
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 6px;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    background: url("../img/stack/zigzag-line-desktop.svg.svg") no-repeat center / cover;
+  &--zigzag {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 6px;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      background: url("../img/stack/zigzag-line-desktop.svg") no-repeat center / cover;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 73px 50px 37px;
+    gap: 41px;
+
+    &--zigzag {
+      &::before {
+        height: 17px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 91px 250px 59px 225px;
+    gap: 39px;
+
+    &--zigzag {
+      &::before {
+        height: 24px;
+      }
+    }
+  }
+}
+
+.advantages__title {
+  margin-left: 6px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
   }
 }
 
@@ -31,6 +65,12 @@
   margin-block: 0;
   padding-inline: 0;
   gap: 30px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 57px 63px;
+  }
 }
 
 .advantages__item {
@@ -38,4 +78,127 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 16px;
+  padding-right: 80px;
+  margin-left: 6px;
+
+  @media (min-width: $tablet-width) {
+    gap: 18px;
+    margin-left: 0;
+  }
+
+  &--flower {
+    @media (min-width: $tablet-width) {
+      grid-row: 1 / 2;
+    }
+  }
+
+  &--price {
+    gap: 26px;
+    margin-bottom: 5px;
+    padding-right: 50px;
+
+    @media (min-width: $tablet-width) {
+      grid-row: 2 / 3;
+      margin-bottom: 6px;
+    }
+  }
+
+  &--heart {
+    gap: 21px;
+    margin-bottom: 2px;
+    padding-right: 70px;
+
+    @media (min-width: $tablet-width) {
+      grid-row: 3 / 4;
+      margin-bottom: 0;
+    }
+  }
+
+  &--tangle {
+    gap: 17px;
+    margin-bottom: 3px;
+    padding-right: 30px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 2px;
+      padding: 0 30px 0 7px;
+      gap: 19px;
+    }
+  }
+
+  &--rocket {
+    gap: 26px;
+    margin-left: 0;
+    margin-bottom: 2px;
+    padding-right: 10px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0;
+      margin-bottom: 1px;
+      gap: 28px;
+    }
+  }
+
+  &--gift {
+    gap: 20px;
+    padding-right: 10px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 10px 0 7px;
+      gap: 21px;
+    }
+  }
+}
+
+.advantages__icon-wrapper {
+  display: block;
+  min-width: 33px;
+  min-height: 38px;
+  padding-left: 8px;
+
+  &--price {
+    min-width: 47px;
+    min-height: 27px;
+    padding-left: 0;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 1px;
+    }
+  }
+
+  &--heart {
+    min-width: 34px;
+    min-height: 27px;
+    padding-left: 7px;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 8px;
+    }
+  }
+
+  &--tangle {
+    min-width: 35px;
+    min-height: 34px;
+    padding-left: 3px;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 0;
+    }
+  }
+
+  &--rocket {
+    min-width: 55px;
+    min-height: 23px;
+    padding-left: 0;
+  }
+
+  &--gift {
+    min-width: 33px;
+    min-height: 32px;
+    padding-left: 3px;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 2px;
+    }
+  }
 }

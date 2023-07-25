@@ -5,6 +5,36 @@
   background-repeat: no-repeat;
   background-size: 568px 369px;
   background-position: top center;
+
+  @media (min-width: $tablet-width) {
+    min-height: 681px;
+    background-size: 1150px 746px;
+    background-position: center bottom;
+
+    &--zigzag {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        min-height: 24px;
+        left: 0;
+        bottom: -12px;
+        background: url("../img/stack/zigzag-hero-desktop.svg") no-repeat center center / cover;
+        z-index: 2;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--zigzag {
+      &::after {
+        min-height: 35px;
+        bottom: -17px;
+      }
+    }
+  }
 }
 
 .hero__wrapper {
@@ -14,11 +44,23 @@
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    min-height: 681px;
+  }
 }
 
 .hero__title {
   text-align: center;
   padding: 73px 30px 120px;
+
+  @media (min-width: $tablet-width) {
+    padding: 90px 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 93px 225px;
+  }
 }
 
 .hero__list {
@@ -28,12 +70,26 @@
   list-style-type: none;
   margin-block: 0;
   padding-inline: 0;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    padding: 0 50px;
+  }
 }
 
 .hero-item {
   display: block;
   min-width: 320px;
   min-height: 103px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 334px;
+    min-height: 119px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 525px;
+  }
 }
 
 .hero__link {
@@ -45,21 +101,50 @@
   min-width: 320px;
   min-height: 103px;
   padding: 21px 27px 18px 30px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 334px;
+    min-height: 119px;
+    gap: 90px;
+    padding: 30px 33px 27px 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 525px;
+    gap: 270px;
+    padding: 30px 35px 27px 36px;
+  }
 }
 
 .hero__catalog {
   width: min-content;
   padding: 1px 0 13px;
+
+  @media (min-width: $tablet-width) {
+    padding: 5px 0 7px;
+  }
 }
 
 .hero__icon-lamp {
   display: block;
   margin: 2px 9px 0 0;
   opacity: 0.5;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 3px 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 1px 0 0;
+  }
 }
 
 .hero__icon-toys {
   display: block;
   margin-bottom: 4px;
   opacity: 0.5;
+
+  @media (min-width: $tablet-width) {
+    margin: 1px 0 0 0;
+  }
 }
