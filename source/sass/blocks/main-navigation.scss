@@ -192,6 +192,19 @@
     border-top: 1px solid $light-gray;
     border-bottom: 1px solid $light-gray;
   }
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:focus-visible {
+    color: $tiffany-hover;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 }
 
 .main-navigation__list--search .main-navigation__item:last-child a {

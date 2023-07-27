@@ -16,6 +16,22 @@
   padding: 22px 39px 23px;
   gap: 27px;
 
+  &:hover .copyright__icon {
+    color: $tiffany-hover;
+    transition: color 0.5s, opacity 0.5s;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $black;
+    outline-offset: 2px;
+  }
+
+  &:active .copyright__icon {
+    color: $tiffany-hover;
+    opacity: 30%;
+    transition: color 0.5s, opacity 0.5s;
+  }
+
   @media (min-width: $tablet-width) {
     min-width: 180px;
     min-height: 34px;
@@ -40,4 +56,5 @@
   width: 27px;
   height: 34px;
   margin-left: auto;
+  color: $tiffany-button;
 }

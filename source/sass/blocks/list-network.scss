@@ -29,6 +29,22 @@
   width: 28px;
   height: 26px;
   padding: 2px 0;
+  color: $black-network;
+
+  &:hover {
+    color: $tiffany-hover;
+  }
+
+  &:focus-visible {
+    color: $tiffany-hover;
+    outline: 2px solid $black;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    color: $tiffany-hover;
+    opacity: 30%;
+  }
 }
 
 .list-network__icon-wrapper {

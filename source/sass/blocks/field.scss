@@ -11,19 +11,52 @@
   box-shadow: 0 -2px 0 0 $black inset;
   background-color: inherit;
   resize: none;
-  transition: outline 0.5s;
+  transition: box-shadow 0.5;
 
   &::placeholder {
     color: $black;
     opacity: 30%;
   }
 
+  &:hover {
+    box-shadow: 0 -2px 0 0 $tiffany-link inset;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 -2px 0 0 $tiffany-link inset;
+    outline: none;
+  }
+
+  &:active {
+    box-shadow: 0 -2px 0 0 $tiffany-link inset;
+  }
+
   &--phone {
     padding: 14px 35px 20px 0;
+
+    &:hover + .fieldset-information__icon-wrapper {
+      color: $tiffany-link;
+      opacity: 1;
+    }
+
+    &:active + .fieldset-information__icon-wrapper {
+      color: $tiffany-link;
+      opacity: 1;
+    }
   }
 
   &--email {
     padding: 16px 38px 18px 0;
+
+    &:hover + .fieldset-information__icon-wrapper {
+      color: $tiffany-link;
+      opacity: 1;
+    }
+
+    &:active + .fieldset-information__icon-wrapper {
+      color: $tiffany-link;
+      opacity: 1;
+    }
   }
 
   &--textarea {
@@ -33,6 +66,22 @@
     padding: 17px;
     outline: 2px solid $dark-gray;
     box-shadow: none;
+    transition: outline 0.5s;
+
+    &:hover {
+      outline: 2px solid $tiffany-link;
+      box-shadow: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $tiffany-link;
+      box-shadow: none;
+    }
+
+    &:active {
+      outline: 2px solid $tiffany-link;
+      box-shadow: none;
+    }
   }
 
   @media (min-width: $tablet-width) {

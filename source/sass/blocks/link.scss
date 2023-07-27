@@ -5,6 +5,7 @@
   line-height: 24px;
   font-weight: 700;
   color: $black;
+  transition: color 0.5s, opacity 0.5s, background-color 0.5s;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -17,10 +18,36 @@
 
   &--background {
     background-color: $tiffany;
+
+    &:hover {
+      background-color: $tiffany-link-hover;
+    }
+
+    &:focus-visible {
+      background-color: $tiffany-link-hover;
+      outline: none;
+    }
+
+    &:active {
+      background-color: $tiffany-link-hover;
+    }
   }
 
   &--background-dark {
     background-color: $tiffany-dark;
+
+    &:hover {
+      background-color: $tiffany-hover;
+    }
+
+    &:focus-visible {
+      background-color: $tiffany-hover;
+      outline: none;
+    }
+
+    &:active {
+      background-color: $tiffany-hover;
+    }
   }
 
   &--small {
@@ -36,28 +63,6 @@
 
   &--small-height {
     line-height: 18px;
-  }
-
-  &--line {
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: "";
-      width: 167px;
-      height: 1px;
-      left: 0;
-      bottom: 0;
-      background-color: $tiffany-link;
-    }
-
-    @media (min-width: $tablet-width) {
-      margin-bottom: 60px;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-bottom: 0;
-    }
   }
 
   &--search {
@@ -101,6 +106,7 @@
       top: 31px;
       left: 30px;
       background: url("../img/stack/icon-basket.svg") no-repeat center center / cover;
+      opacity: 20%;
     }
 
     @media (min-width: $tablet-width) {
@@ -175,5 +181,46 @@
       font-size: 15px;
       line-height: 24px;
     }
+  }
+}
+
+.link--line {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    background-color: $tiffany-link;
+  }
+
+  &:hover {
+    color: $tiffany-hover;
+  }
+
+  &:focus-visible {
+    color: $tiffany-hover;
+    outline: 2px solid $black;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    color: $tiffany-hover;
+
+    &::after {
+      opacity: 10%;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
   }
 }

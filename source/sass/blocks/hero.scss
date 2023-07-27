@@ -75,6 +75,7 @@
   list-style-type: none;
   margin-block: 0;
   padding-inline: 0;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
@@ -107,6 +108,29 @@
   min-height: 103px;
   padding: 21px 27px 18px 30px;
 
+  &:hover {
+    transform: scaleY(1.05);
+
+    .hero__catalog {
+      transform: scale(1) translate(0, -5px);
+    }
+
+    .hero__icon-wrapper {
+      opacity: 70%;
+      transform: scale(1) translate(0, -5px);
+    }
+  }
+
+  &:focus-visible .hero__icon-wrapper {
+    opacity: 70%;
+    transition: opacity 0.5s;
+  }
+
+  &:active .hero__icon-wrapper {
+    opacity: 30%;
+    transition: opacity 0.5s;
+  }
+
   @media (min-width: $tablet-width) {
     min-width: 334px;
     min-height: 119px;
@@ -130,7 +154,7 @@
   }
 }
 
-.hero__icon-lamp {
+.hero__icon-wrapper {
   display: block;
   margin: 2px 9px 0 0;
   opacity: 0.5;
@@ -142,14 +166,12 @@
   @media (min-width: $desktop-width) {
     margin: 0 1px 0 0;
   }
-}
 
-.hero__icon-toys {
-  display: block;
-  margin-bottom: 4px;
-  opacity: 0.5;
+  &--toys {
+    margin: 0 0 4px 0;
 
-  @media (min-width: $tablet-width) {
-    margin: 1px 0 0 0;
+    @media (min-width: $tablet-width) {
+      margin: 1px 0 0 0;
+    }
   }
 }

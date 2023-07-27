@@ -38,6 +38,14 @@
   min-height: 503px;
   justify-content: space-between;
 
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+
   @media (min-width: $tablet-width) {
     min-height: 288px;
     outline: 1px solid $light-gray;
@@ -183,5 +191,18 @@
   @media (min-width: $tablet-width) {
     min-width: 102px;
     min-height: 78px;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $black;
+  }
+
+  &:active {
+    transform: scale(0.8);
+    opacity: 30%;
   }
 }

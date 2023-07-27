@@ -9,6 +9,7 @@
   line-height: 24px;
   font-weight: 700;
   border-bottom: 1px solid $light-gray;
+  flex-shrink: 0;
 
   @media (min-width: $tablet-width) {
     border-bottom: none;

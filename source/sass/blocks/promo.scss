@@ -18,7 +18,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    position: relative;
     grid-template-rows: repeat(4, 1fr);
     gap: 35px 58px;
     padding: 54px 50px 42px;
@@ -33,15 +32,16 @@
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
+    grid-row: 1 / 2;
     flex-direction: row;
     min-width: 100%;
     gap: 105px;
   }
 
   @media (min-width: $desktop-width) {
-    position: absolute;
-    top: 54px;
-    left: 0;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    order: 1;
     flex-direction: row-reverse;
     gap: 11px;
     justify-content: flex-end;
@@ -132,7 +132,7 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 2 / 3;
-    grid-row: 1 / 5;
+    grid-row: 1 / -1;
     min-width: 525px;
     min-height: 636px;
     padding-top: 0;

@@ -17,6 +17,9 @@
     line-height: 57px;
   }
 
+  &--uppercase {
+    text-transform: uppercase;
+  }
 
   &--small {
     font-size: 25px;
@@ -69,6 +72,16 @@
 
     @media (min-width: $desktop-width) {
       font-size: 17px;
+    }
+  }
+
+  &--modal {
+    font-size: 25px;
+    line-height: 30px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 30px;
+      line-height: 57px;
     }
   }
 
