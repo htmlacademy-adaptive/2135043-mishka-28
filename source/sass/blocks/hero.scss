@@ -83,10 +83,11 @@
   }
 }
 
-.hero-item {
+.hero__item {
   display: block;
   min-width: 320px;
   min-height: 103px;
+  background-color: $tiffany;
 
   @media (min-width: $tablet-width) {
     min-width: 334px;
@@ -109,15 +110,15 @@
   padding: 21px 27px 18px 30px;
 
   &:hover {
-    transform: scaleY(1.05);
+    transform: scale(1, 1.05);
 
     .hero__catalog {
-      transform: scale(1) translate(0, -5px);
+      transform: scale(1, 1) translate(0, -5px);
     }
 
     .hero__icon-wrapper {
       opacity: 70%;
-      transform: scale(1) translate(0, -5px);
+      transform: scale(1, 1) translate(0, -5px);
     }
   }
 
@@ -157,7 +158,6 @@
 .hero__icon-wrapper {
   display: block;
   margin: 2px 9px 0 0;
-  opacity: 0.5;
 
   @media (min-width: $tablet-width) {
     margin: 0 3px 0 0;
