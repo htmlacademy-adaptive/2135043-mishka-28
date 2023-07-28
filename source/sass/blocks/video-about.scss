@@ -187,6 +187,7 @@
   background: url("../img/stack/icon-video-button.svg") no-repeat center center / cover;
   border: none;
   cursor: pointer;
+  transition: transform 0.5s, opacity 0.5s;
 
   @media (min-width: $tablet-width) {
     min-width: 102px;
