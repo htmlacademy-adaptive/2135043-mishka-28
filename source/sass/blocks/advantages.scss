@@ -27,22 +27,24 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 73px 50px 37px;
+    padding: 73px 50px 50px;
     gap: 41px;
 
     &--zigzag {
       &::before {
         height: 17px;
+        background-size: contain;
       }
     }
   }
 
   @media (min-width: $desktop-width) {
-    padding: 91px 250px 59px 225px;
+    padding: 91px 250px 57px 225px;
     gap: 39px;
 
     &--zigzag {
       &::before {
+        background-size: 1052px 34px;
         height: 24px;
       }
     }
@@ -69,7 +71,12 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 57px 63px;
+    gap: 54px 7px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 54px 33px;
   }
 }
 
@@ -89,6 +96,11 @@
   &--flower {
     @media (min-width: $tablet-width) {
       grid-row: 1 / 2;
+      padding-right: 90px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 100px;
     }
   }
 
@@ -100,6 +112,7 @@
     @media (min-width: $tablet-width) {
       grid-row: 2 / 3;
       margin-bottom: 6px;
+      padding-right: 70px;
     }
   }
 
@@ -111,6 +124,11 @@
     @media (min-width: $tablet-width) {
       grid-row: 3 / 4;
       margin-bottom: 0;
+      padding-right: 80px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 90px;
     }
   }
 
@@ -121,7 +139,7 @@
 
     @media (min-width: $tablet-width) {
       margin-bottom: 2px;
-      padding: 0 30px 0 7px;
+      padding: 0 20px 0 0;
       gap: 19px;
     }
   }
@@ -136,6 +154,7 @@
       padding: 0;
       margin-bottom: 1px;
       gap: 28px;
+      padding-right: 0;
     }
   }
 
@@ -144,7 +163,7 @@
     padding-right: 10px;
 
     @media (min-width: $tablet-width) {
-      padding: 0 10px 0 7px;
+      padding: 0 30px 0 7px;
       gap: 21px;
     }
   }
@@ -152,13 +171,13 @@
 
 .advantages__icon-wrapper {
   display: block;
-  min-width: 33px;
-  min-height: 38px;
+  width: 33px;
+  height: 38px;
   padding-left: 8px;
 
   &--price {
-    min-width: 47px;
-    min-height: 27px;
+    width: 47px;
+    height: 27px;
     padding-left: 0;
 
     @media (min-width: $tablet-width) {
@@ -167,34 +186,40 @@
   }
 
   &--heart {
-    min-width: 34px;
-    min-height: 27px;
+    width: 34px;
+    height: 27px;
     padding-left: 7px;
 
     @media (min-width: $tablet-width) {
-      padding-left: 8px;
+      padding: 2px 0 0 8px;
     }
   }
 
   &--tangle {
-    min-width: 35px;
-    min-height: 34px;
+    width: 35px;
+    height: 34px;
     padding-left: 3px;
 
     @media (min-width: $tablet-width) {
-      padding-left: 0;
+      width: 45px;
+      height: 38px;
+      padding: 4px 0 0 10px;
     }
   }
 
   &--rocket {
-    min-width: 55px;
-    min-height: 23px;
+    width: 55px;
+    height: 23px;
     padding-left: 0;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 3px;
+    }
   }
 
   &--gift {
-    min-width: 33px;
-    min-height: 32px;
+    width: 33px;
+    height: 32px;
     padding-left: 3px;
 
     @media (min-width: $tablet-width) {

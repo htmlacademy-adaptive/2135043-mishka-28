@@ -13,17 +13,19 @@
 .product-catalog__title {
   width: 100%;
   min-height: 177px;
-  padding: 74px 40px;
+  padding: 72px 40px 73px;
   background-color: $gray;
   text-align: center;
 
   @media (min-width: $tablet-width) {
+    min-height: 158px;
     display: block;
-    padding: 36px 183px 75px 184px;
+    padding: 35px 183px 75px 184px;
   }
 
-  @media (min-width: $tablet-width) {
-    padding: 39px 183px 100px 184px;
+  @media (min-width: $desktop-width) {
+    min-height: 192;
+    padding: 39px 183px 96px 184px;
   }
 }
 
@@ -40,14 +42,14 @@
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    padding: 79px 50px 13px;
+    padding: 79px 50px 13px 49px;
     gap: 54px;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 128px 50px 57px;
+    padding: 128px 50px 16px;
     gap: 51px;
   }
 }

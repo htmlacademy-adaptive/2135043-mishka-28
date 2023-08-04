@@ -93,8 +93,8 @@
   top: 0;
   left: 0;
   width: 82px;
-  height: 52px;
-  outline: 2px solid rgba(68, 68, 68, 0.1);
+  min-height: 52px;
+  border: 2px solid rgba(68, 68, 68, 0.1);
   background-color: inherit;
 
   @media (min-width: $tablet-width) {
@@ -121,15 +121,15 @@
 }
 
 .modal-container__control-input[type="checkbox"]:checked + .modal-container__control-mark {
-  outline: 2px solid $tiffany-button;
+  border: 2px solid $tiffany-button;
 }
 
 .modal-container__control-input:hover + .modal-container__control-mark {
-  outline: 2px solid rgba(68, 68, 68, 0.3);
+  border: 2px solid rgba(68, 68, 68, 0.3);
 }
 
 .modal-container__control-input:focus-visible + .modal-container__control-mark {
-  outline: 2px solid $tiffany-icon;
+  border: 2px solid $tiffany-icon;
 }
 
 .modal-container__control-input:active + .modal-container__control-mark {

@@ -10,7 +10,7 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    gap: 103px;
+    gap: 110px;
     padding: 33px 67px 50px 50px;
 
     &--color {
@@ -20,7 +20,7 @@
 
     &--name {
       padding: 50px;
-      gap: 97px;
+      gap: 106px;
     }
 
     &--contacts {
@@ -30,21 +30,21 @@
 
     &--wishes {
       padding: 50px 50px 3px;
-      gap: 100px;
+      gap: 106px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    gap: 63px;
-    padding: 33px 97px 49px;
+    gap: 54px;
+    padding: 33px 97px 49px 111px;
 
     &--color {
       padding: 0;
     }
 
     &--name {
-      padding: 66px 225px 50px 97px;
-      gap: 60px;
+      padding: 48px 210px 50px 111px;
+      gap: 55px;
     }
 
     &--contacts {
@@ -52,8 +52,8 @@
     }
 
     &--wishes {
-      padding: 50px 225px 19px 97px;
-      gap: 64px;
+      padding: 50px 210px 19px 111px;
+      gap: 52px;
     }
   }
 }
@@ -70,7 +70,7 @@
   @media (min-width: $tablet-width) {
     &--color {
       flex-direction: row;
-      gap: 93px;
+      gap: 106px;
       padding: 50px;
     }
 
@@ -81,53 +81,12 @@
 
   @media (min-width: $desktop-width) {
     &--color {
-      gap: 55px;
-      padding: 48px 99px 52px 97px;
+      gap: 53px;
+      padding: 46px 89px 52px 111px;
     }
 
     &--contacts {
-      padding: 50px 225px 50px 97px;
-    }
-  }
-}
-
-.fieldset-information__title {
-  display: flex;
-  gap: 24px;
-  min-width: 260px;
-  padding: 9px 0 15px;
-
-  @media (min-width: $tablet-width) {
-    min-width: 61px;
-    padding: 18px 0 0 0;
-  }
-}
-
-.fieldset-information__text-wrapper {
-  display: block;
-  background-color: inherit;
-  z-index: 2;
-
-  &--mail {
-    min-width: 60px;
-  }
-}
-
-.fieldset-information__line {
-  @media (max-width: $mobile-width-only) {
-    display: block;
-    width: 100%;
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 1px;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: $tiffany-link;
+      padding: 50px 210px 50px 111px;
     }
   }
 }
@@ -151,38 +110,44 @@
 
   &--radio {
     min-width: 260px;
-    gap: 24px;
-    padding: 15px 0 34px;
+    gap: 12px;
+    padding: 19px 0 25px;
 
     @media (min-width: $tablet-width) {
-      gap: 58px;
-      padding: 17px 0;
+      gap: 24px;
+      padding: 1px 0 0 0;
+      max-width: 331px;
     }
 
     @media (min-width: $desktop-width) {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 59px;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 24px;
+      min-width: 800px;
+      max-width: 800px;
     }
   }
 
   &--checkbox {
-    gap: 43px;
-    padding: 20px 0 34px;
+    gap: 23px;
+    padding: 10px 0 24px;
     min-width: 260px;
 
     @media (min-width: $tablet-width) {
-      min-width: 506px;
+      min-width: 491px;
+      max-width: 491px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 60px 50px;
-      padding: 17px 0;
+      gap: 24px 35px;
+      padding: 0;
     }
 
     @media (min-width: $desktop-width) {
       min-width: 828px;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 67px 50px;
+      max-width: 828px;
+      padding-right: 48px;
+      grid-template-columns: repeat(3, auto);
+      gap: 24px 50px;
     }
   }
 
@@ -191,21 +156,32 @@
     padding: 14px 0 26px;
 
     @media (min-width: $tablet-width) {
-      padding: 0;
+      padding: 2px 0 0 0;
       gap: 24px;
+      max-width: 501px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 700px;
     }
   }
 
   &--contacts {
     min-width: 260px;
     gap: 35px;
-    padding: 9px 0 26px;
+    padding: 8px 0 25px;
 
     @media (min-width: $tablet-width) {
       min-width: 668px;
+      max-width: 668px;
       flex-direction: row;
       gap: 24px;
       padding: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      min-width: 828px;
+      max-width: 828px;
     }
   }
 }
@@ -213,21 +189,25 @@
 .fieldset-information__control {
   position: relative;
   display: block;
-  padding-left: 61px;
+  padding: 11px 0 9px 60px;
+
+  &--big {
+    padding: 1px 0 1px 60px;
+  }
 
   @media (min-width: $tablet-width) {
-    padding-left: 78px;
+    padding: 17px 0 17px 76px;
 
     &--checkbox {
-      padding-left: 82px;
+      padding: 16px 0 17px 81px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 80px;
+    padding: 15px 0 19px 80px;
 
     &--checkbox {
-      padding-left: 82px;
+      padding: 19px 0 15px 82px;
     }
   }
 }
@@ -240,17 +220,16 @@
 .fieldset-information__control-mark {
   position: absolute;
   content: "";
-  top: -10px;
+  top: 0;
   left: 0;
   width: 38px;
   height: 38px;
-  outline: 2px solid $dark-gray;
+  border: 2px solid $dark-gray;
   background-color: inherit;
 
   @media (min-width: $tablet-width) {
     width: 52px;
     height: 52px;
-    top: -17px;
   }
 }
 
@@ -260,9 +239,8 @@
   border-radius: 50%;
 
   @media (min-width: $tablet-width) {
-    width: 52px;
-    height: 52px;
-    top: -17px;
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -270,7 +248,7 @@
   top: -3px;
 
   @media (min-width: $tablet-width) {
-    top: -17px;
+    top: 0;
   }
 }
 
@@ -310,8 +288,8 @@
   &::before {
     position: absolute;
     content: "";
-    width: 23px;
-    height: 16px;
+    width: 29px;
+    height: 22px;
     top: 0;
     bottom: 0;
     left: 0;
@@ -345,24 +323,22 @@
   @media (min-width: $desktop-width) {
     &--accessories {
       grid-column: 1 / 2;
-      grid-row: 1 / 2;
     }
 
     &--toys {
       grid-column: 1 / 2;
-      grid-row: 2 / 3;
     }
   }
 
   &--name {
     @media (min-width: $tablet-width) {
       flex-direction: row;
-      gap: 25px;
+      gap: 24px;
     }
   }
 
   &--contacts {
-    position: relative;
+    gap: 4px;
 
     @media (min-width: $tablet-width) {
       flex-direction: row;
@@ -370,7 +346,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      gap: 37px;
+      gap: 22px;
     }
   }
 }
@@ -392,10 +368,40 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 16px;
+    max-width: 91px;
 
     &--tiffany {
       min-width: 91px;
     }
+
+    &--name {
+      min-width: 49px;
+      max-width: 49px;
+    }
+
+    &--surname {
+      min-width: 101px;
+      max-width: 101px;
+    }
+
+    &--patronymic {
+      min-width: 100px;
+      max-width: 100px;
+    }
+  }
+}
+
+.fieldset-information__input-wrapper {
+  position: relative;
+  max-width: 260px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 501px;
+    align-self: flex-end;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 700px;
   }
 }
 
@@ -455,14 +461,16 @@
   display: block;
   min-width: 260px;
   min-height: 142px;
-  padding: 8px 0 7px;
+  padding: 8px 0 0 0;
 
   @media (min-width: $tablet-width) {
-    min-width: 501px;
+    min-width: 500px;
+    max-width: 500px;
     padding: 0;
   }
 
   @media (min-width: $desktop-width) {
     min-width: 700px;
+    max-width: 700px;
   }
 }

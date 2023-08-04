@@ -67,7 +67,7 @@
                   </a>
                 </li>
                 <li class="main-navigation__item main-navigation__item--basket">
-                  <a class="main-navigation__link link link--basket" href="#">Корзина пока пуста</a>
+                  <a class="main-navigation__link link link--basket" href="#">Корзина: пока пуста</a>
                 </li>
               </ul>
               <ul class="main-navigation__list main-navigation__list--product main-navigation__list--product-background">
@@ -91,8 +91,8 @@
               <h2 class="product-catalog__title title title--zigzag">Каталог товаров</h2>
               <ul class="product-catalog__list">
                 <li class="product-catalog__item product-card">
-                  <div class="product-card__container">
-                    <a class="product-card__picture-link">
+                  <div class="product-card__container" tabindex="1">
+                    <a class="product-card__picture-link" href="#">
                       <picture>
                         <!--<source type="image/webp" media="(min-width: 1150px)"
                           srcset="img/catalog/rabbit-desktop.webp 1x, img/catalog/rabbit-desktop@2x.webp 2x">
@@ -112,7 +112,7 @@
                             <dt class="product-card__argument">Рост</dt>
                             <dd class="product-card__comment">30 см,</dd>
                           </dl>
-                          <dl class="product-card__describe">
+                          <dl class="product-card__describe product-card__describe--weight">
                             <dt class="product-card__argument">вес</dt>
                             <dd class="product-card__comment">200 г</dd>
                           </dl>
@@ -128,8 +128,8 @@
                   </div>
                 </li>
                 <li class="product-catalog__item product-card">
-                  <div class="product-card__container">
-                    <a class="product-card__picture-link">
+                  <div class="product-card__container" tabindex="1">
+                    <a class="product-card__picture-link" href="#">
                       <picture>
                         <!--<source type="image/webp" media="(min-width: 1150px)"
                           srcset="img/catalog/laundry-basket-desktop.webp 1x, img/catalog/laundry-basket-desktop@2x.webp 2x">
@@ -142,14 +142,14 @@
                       </picture>
                     </a>
                     <div class="product-card__information-wrapper">
-                      <a class="product-card__information-link" href="#">
-                        <h3 class="product-card__title title title--small-size">Корзина для белья</h3>
-                        <div class="product-card__description">
+                      <a class="product-card__information-link product-card__information-link--basket" href="#">
+                        <h3 class="product-card__title title title--small-size">Корзинка для белья</h3>
+                        <div class="product-card__description product-card__description--basket">
                           <dl class="product-card__describe">
                             <dt class="product-card__argument">Диаметр</dt>
                             <dd class="product-card__comment">15 см,</dd>
                           </dl>
-                          <dl class="product-card__describe">
+                          <dl class="product-card__describe product-card__describe--height">
                             <dt class="product-card__argument">высота</dt>
                             <dd class="product-card__comment">10 см</dd>
                           </dl>
@@ -165,8 +165,8 @@
                   </div>
                 </li>
                 <li class="product-catalog__item product-card">
-                  <div class="product-card__container">
-                    <a class="product-card__picture-link">
+                  <div class="product-card__container" tabindex="1">
+                    <a class="product-card__picture-link" href="#">
                       <picture>
                         <!--<source type="image/webp" media="(min-width: 1150px)"
                           srcset="img/catalog/toy-basket-desktop.webp 1x, img/catalog/toy-basket-desktop@2x.webp 2x">
@@ -183,12 +183,12 @@
                     <div class="product-card__information-wrapper">
                       <a class="product-card__information-link product-card__information-link--big-basket" href="#">
                         <h3 class="product-card__title title title--small-size">Большая корзинка для игрушек</h3>
-                        <div class="product-card__description">
-                          <dl class="product-card__describe">
+                        <div class="product-card__description product-card__description--basket">
+                          <dl class="product-card__describe product-card__describe--diameter">
                             <dt class="product-card__argument">Диаметр</dt>
                             <dd class="product-card__comment">30 см,</dd>
                           </dl>
-                          <dl class="product-card__describe">
+                          <dl class="product-card__describe product-card__describe--height">
                             <dt class="product-card__argument">высота</dt>
                             <dd class="product-card__comment">30 см</dd>
                           </dl>
@@ -207,24 +207,17 @@
             </div>
           </section>
           <section class="main-inner__section video-about">
-            <div class="video-about__wrapper">
+            <div class="video-about__wrapper" tabindex="1">
               <h2 class="visually-hidden">Посмотрите видео о производстве наших товаров</h2>
-              <div class="video-about__information" tabindex="1">
-                <div class="video-about__information-wrapper">
-                  <div class="video-about__icon-wrapper">
-                    <svg class="video-about__icon" width="32" height="22" viewBox="0 0 32 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M26 10L32 6V22L26 18V10ZM24 10V18C24 20.2 22.2 22 20 22H4C1.8 22 0 20.2 0 18V10C0 7.8 1.8 6 4 6H14C14 4.9 14.9 4 16 4V2H5C4.4 2 4 1.6 4 1C4 0.4 4.4 0 5 0H17C17.6 0 18 0.4 18 1V4C19.1 4 20 4.9 20 6C22.2 6 24 7.8 24 10ZM12 10H4V18H12V10ZM20 11C20 10.4 19.6 10 19 10H15C14.4 10 14 10.4 14 11C14 11.6 14.4 12 15 12H19C19.6 12 20 11.6 20 11Z"
-                        fill="#63D1BB" />
-                    </svg>
-                  </div>
-                  <h3 class="video-about__title title title--small-size"><span>Процесс</span><span>производства</span></h3>
+              <div class="video-about__information-wrapper">
+                <div class="video-about__icon-wrapper">
+                  <svg class="video-about__icon" width="32" height="22" viewBox="0 0 32 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M26 10L32 6V22L26 18V10ZM24 10V18C24 20.2 22.2 22 20 22H4C1.8 22 0 20.2 0 18V10C0 7.8 1.8 6 4 6H14C14 4.9 14.9 4 16 4V2H5C4.4 2 4 1.6 4 1C4 0.4 4.4 0 5 0H17C17.6 0 18 0.4 18 1V4C19.1 4 20 4.9 20 6C22.2 6 24 7.8 24 10ZM12 10H4V18H12V10ZM20 11C20 10.4 19.6 10 19 10H15C14.4 10 14 10.4 14 11C14 11.6 14.4 12 15 12H19C19.6 12 20 11.6 20 11Z"
+                      fill="#63D1BB" />
+                  </svg>
                 </div>
-                <div class="video-about__description-wrapper">
-                  <p class="video-about__description description description--small-font">По просьбам наших любимых фолловеров мы сняли для вас подробное
-                    видео о том, как появляются наши товары.</p>
-                  <a class="video-about__order-button button button--order" href="form.html">Сделать заказ</a>
-                </div>
+                <h3 class="video-about__title title title--small-size">Процесс производства</h3>
               </div>
               <div class="video-about__picture-wrapper">
                 <picture>
@@ -241,6 +234,12 @@
                   <span class="visually-hidden">Воспроизвести видео</span>
                 </button>
               </div>
+              <div class="video-about__description-wrapper">
+                <p class="video-about__description description description--small-font">По просьбам наших любимых фолловеров мы сняли для вас подробное
+                  видео о том, как появляются наши товары.</p>
+                <a class="video-about__order-button button button--order" href="form.html">Сделать заказ</a>
+              </div>
+
             </div>
           </section>
         </div>
@@ -337,7 +336,7 @@
       </footer>
       <div class="modal-container" id="modal-rabbit" aria-hidden="true">
         <div class="modal-container__wrapper">
-          <h2 class="modal-container__title title title--modal title--uppercase">Добавить в корзину</h2>
+          <h2 class="modal-container__title title title--modal title--uppercase">Добавить в&nbsp;корзину</h2>
           <div class="modal-container__form">
             <p class="modal-container__subtitle">Выберите размер:</p>
             <div class="modal-container__size-wrapper">
@@ -366,7 +365,7 @@
       </div>
       <div class="modal-container" id="modal-basket" aria-hidden="true">
         <div class="modal-container__wrapper">
-          <h2 class="modal-container__title title title--modal title--uppercase">Добавить в корзину</h2>
+          <h2 class="modal-container__title title title--modal title--uppercase">Добавить в&nbsp;корзину</h2>
           <div class="modal-container__form">
             <p class="modal-container__subtitle">Выберите размер:</p>
             <div class="modal-container__size-wrapper">
@@ -395,7 +394,7 @@
       </div>
       <div class="modal-container" id="modal-toy" aria-hidden="true">
         <div class="modal-container__wrapper">
-          <h2 class="modal-container__title title title--modal title--uppercase">Добавить в корзину</h2>
+          <h2 class="modal-container__title title title--modal title--uppercase">Добавить в&nbsp;корзину</h2>
           <div class="modal-container__form">
             <p class="modal-container__subtitle">Выберите размер:</p>
             <div class="modal-container__size-wrapper">

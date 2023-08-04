@@ -6,11 +6,18 @@
     padding: 20px;
     min-width: 220px;
     min-height: 74px;
+    align-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 20px 20px 20px 120px;
+    min-width: 320px;
   }
 }
 
 .copyright__link {
   display: flex;
+  flex-wrap: wrap;
   min-width: 260px;
   min-height: 80px;
   padding: 22px 39px 23px;
@@ -39,13 +46,14 @@
     gap: 25px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     gap: 28px;
   }
 }
 
 .copyright__title {
   margin-top: 7px;
+  max-width: 128px;
 
   @media (min-width: $tablet-width) {
     margin-top: 8px;
@@ -53,8 +61,10 @@
 }
 
 .copyright__icon {
+  display: block;
   width: 27px;
   height: 34px;
   margin-left: auto;
   color: $tiffany-button;
+  align-self: center;
 }

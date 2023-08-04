@@ -6,7 +6,7 @@
   min-height: 80px;
   margin-block: 0;
   padding-inline: 0;
-  padding: 25px 59px 28px 59px;
+  padding: 21px 59px 24px 59px;
   list-style-type: none;
   border-bottom: 1px solid $border;
 
@@ -15,6 +15,10 @@
     min-width: 182px;
     min-height: 74px;
     border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 20px 20px 20px 28px;
   }
 }
 

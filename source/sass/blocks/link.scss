@@ -67,6 +67,7 @@
 
   &--search {
     position: relative;
+    padding: 29px 30px 27px 76px;
 
     &::after {
       position: absolute;
@@ -79,8 +80,8 @@
     }
 
     @media (min-width: $tablet-width) {
-      min-width: 79px;
-      min-height: 88px;
+      min-width: 80px;
+      min-height: 100%;
       padding: 36px 30px 36px 30px;
       font-size: 17px;
       line-height: 24px;
@@ -97,60 +98,68 @@
 
   &--basket {
     position: relative;
+    padding: 29px 30px 27px 76px;
 
     &::after {
       position: absolute;
       content: "";
       width: 21px;
       height: 18px;
-      top: 31px;
+      top: 50%;
+      transform: translateY(-50%);
       left: 30px;
       background: url("../img/stack/icon-basket.svg") no-repeat center center / cover;
       opacity: 20%;
     }
 
     @media (min-width: $tablet-width) {
-      min-width: 79.5%;
+      min-width: 78%;
+      max-width: 314px;
       min-height: 88px;
-      padding: 33px 50px 31px 53px;
+      padding: 33px 50px 31px 56px;
       font-size: 17px;
       line-height: 24px;
       text-align: right;
 
       &::after {
-        top: 35px;
         left: 31px;
       }
     }
 
     @media (min-width: $desktop-width) {
       min-width: 316px;
+      max-width: 316px;
     }
   }
 
   &--catalog {
+    padding: 29px 30px 26px 76px;
+
     @media (min-width: $tablet-width) {
       min-width: 150px;
+      max-width: 150px;
       min-height: 44px;
-      padding: 10px;
+      padding: 10px 6px;
       font-size: 15px;
       line-height: 24px;
-      text-align: left;
+    }
 
-      @media (min-width: $desktop-width) {
-        font-size: 17px;
-        min-width: 201px;
-        min-height: 42px;
-        padding: 33px 20px 31px 10px;
-      }
+    @media (min-width: $desktop-width) {
+      font-size: 17px;
+      min-width: 195px;
+      min-height: 42px;
+      padding: 33px 34px 31px 10px;
     }
   }
 
   &--knitting {
+    padding: 28px 30px 26px 76px;
+
     @media (min-width: $tablet-width) {
-      min-width: 150px;
+      min-width: 160px;
+      max-width: 160px;
       min-height: 44px;
-      padding: 10px 9px;
+      padding: 10px 7px 10px 7px;
       font-size: 15px;
       line-height: 24px;
     }
@@ -159,7 +168,7 @@
       font-size: 17px;
       min-width: 202px;
       min-height: 42px;
-      padding: 33px 10px 31px 20px;
+      padding: 33px 10px 31px 30px;
     }
   }
 
@@ -186,6 +195,7 @@
 
 .link--line {
   position: relative;
+  max-width: 169px;
 
   &::after {
     position: absolute;
@@ -193,7 +203,7 @@
     width: 100%;
     height: 1px;
     left: 0;
-    bottom: 0;
+    top: 26px;
     background-color: $tiffany-link;
   }
 
@@ -218,9 +228,18 @@
   @media (min-width: $tablet-width) {
     font-size: 17px;
     margin-bottom: 60px;
+    max-width: 205px;
+
+    &::after {
+      top: 30px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
+
+    &::after {
+      top: 34px;
+    }
   }
 }

@@ -21,7 +21,7 @@
 
 .main-order__title {
   min-width: 320px;
-  padding: 74px 22px;
+  padding: 73px 22px;
   background-color: $gray;
   text-align: center;
 
@@ -32,7 +32,7 @@
 
   @media (min-width: $desktop-width) {
     min-width: 1150px;
-    padding: 39px 321px 100px 323px;
+    padding: 39px 321px 96px 323px;
   }
 }
 
@@ -45,6 +45,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 115px 223px 30px 225px;
+    padding: 116px 223px 30px 225px;
   }
 }

@@ -1,18 +1,20 @@
 .hero {
   width: 100%;
-  min-height: 500px;
+  min-height: 489px;
   background-image: url("../img/hero/hero-picture.jpg");
   background-repeat: no-repeat;
-  background-size: 568px 369px;
-  background-position: top center;
+  background-size: 569px 373px;
+  background-position: center top -18px;
+  background-color: rgba($color: $light-gray, $alpha: 0.25);
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/hero/hero-picture@2x.jpg");
-    background-size: 568px 369px;
+    background-size: 569px 373px;
+    background-color: rgba(236, 236, 236, 0.25);
   }
 
   @media (min-width: $tablet-width) {
-    min-height: 681px;
+    min-height: 679px;
     background-size: 1150px 746px;
     background-position: center bottom;
 
@@ -23,19 +25,23 @@
         position: absolute;
         content: "";
         width: 100%;
-        min-height: 24px;
+        height: 24px;
         left: 0;
         bottom: -12px;
-        background: url("../img/stack/zigzag-hero-desktop.svg") no-repeat center center / cover;
         z-index: 2;
+        background: url("../img/stack/zigzag-hero-tablet.svg") no-repeat center center / cover;
       }
     }
   }
 
   @media (min-width: $desktop-width) {
+    min-height: 683px;
+    position: relative;
+
     &--zigzag {
       &::after {
-        min-height: 35px;
+        background: url("../img/stack/zigzag-hero-desktop.svg") no-repeat center center / contain;
+        height: 34px;
         bottom: -17px;
       }
     }
@@ -44,27 +50,31 @@
 
 .hero__wrapper {
   width: 100%;
-  min-height: 500px;
+  min-height: 489px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
 
   @media (min-width: $tablet-width) {
-    min-height: 681px;
+    min-height: 679px;
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 260px;
   }
 }
 
 .hero__title {
   text-align: center;
-  padding: 73px 30px 120px;
+  padding: 73px 30px 119px;
 
   @media (min-width: $tablet-width) {
     padding: 90px 100px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 93px 225px;
+    padding: 95px 225px;
   }
 }
 
@@ -107,7 +117,7 @@
   justify-content: space-between;
   min-width: 320px;
   min-height: 103px;
-  padding: 21px 27px 18px 30px;
+  padding: 23px 27px 15px 30px;
 
   &:hover {
     transform: scale(1, 1.05);
@@ -134,15 +144,16 @@
 
   @media (min-width: $tablet-width) {
     min-width: 334px;
+    max-width: 334px;
     min-height: 119px;
-    gap: 90px;
-    padding: 30px 33px 27px 36px;
+    gap: 80px;
+    padding: 25px 33px 27px 36px;
   }
 
   @media (min-width: $desktop-width) {
     min-width: 525px;
     gap: 270px;
-    padding: 30px 35px 27px 36px;
+    padding: 25px 35px 27px 36px;
   }
 }
 
@@ -151,27 +162,36 @@
   padding: 1px 0 13px;
 
   @media (min-width: $tablet-width) {
-    padding: 5px 0 7px;
+    padding: 0;
+    max-width: 131px;
   }
 }
 
 .hero__icon-wrapper {
   display: block;
   margin: 2px 9px 0 0;
+  max-width: 41px;
+  max-height: 61px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 3px 0 0;
+    margin: 5px 3px 0 0;
+    align-self: center;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 1px 0 0;
+    margin: 5px 1px 0 0;
   }
 
   &--toys {
     margin: 0 0 4px 0;
+    max-width: 61px;
 
     @media (min-width: $tablet-width) {
       margin: 1px 0 0 0;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin: 6px 0 0 0;
     }
   }
 }

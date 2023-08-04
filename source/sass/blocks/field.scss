@@ -6,12 +6,12 @@
   font-weight: 400;
   font-size: 17px;
   line-height: 18px;
-  padding: 17px 2px;
+  padding: 17px 2px 17px 1px;
   border: 0;
   box-shadow: 0 -2px 0 0 $black inset;
   background-color: inherit;
   resize: none;
-  transition: box-shadow 0.5;
+  transition: box-shadow 0.5s;
 
   &::placeholder {
     color: $black;
@@ -63,10 +63,10 @@
     display: inline-block;
     width: 100%;
     min-height: 142px;
-    padding: 17px;
-    outline: 2px solid $dark-gray;
+    padding: 16px;
+    border: 2px solid $dark-gray;
     box-shadow: none;
-    transition: outline 0.5s;
+    transition: border 0.5s;
 
     &:hover {
       outline: 2px solid $tiffany-link;
@@ -89,6 +89,7 @@
     max-height: 52px;
     padding: 17px 16px;
     font-size: 19px;
+    align-self: flex-end;
 
     &--big {
       min-width: 428px;
@@ -96,11 +97,14 @@
 
     &--phone {
       min-width: 501px;
+      max-width: 501px;
       padding: 14px 55px 20px 17px;
+      justify-self: flex-end;
     }
 
     &--email {
       min-width: 501px;
+      max-width: 501px;
       padding: 15px 60px 19px 18px;
     }
   }
@@ -114,11 +118,13 @@
 
     &--phone {
       min-width: 700px;
+      max-width: 700px;
       padding: 14px 40px 20px 17px;
     }
 
     &--email {
       min-width: 700px;
+      max-width: 700px;
       padding: 15px 40px 19px 18px;
     }
   }

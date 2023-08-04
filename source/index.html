@@ -64,7 +64,7 @@
                   </a>
                 </li>
                 <li class="main-navigation__item main-navigation__item--basket">
-                  <a class="main-navigation__link link link--basket" href="#">Корзина пока пуста</a>
+                  <a class="main-navigation__link link link--basket" href="#">Корзина: пока пуста</a>
                 </li>
               </ul>
               <ul class="main-navigation__list main-navigation__list--product">
@@ -136,16 +136,16 @@
               <p class="promo__description description">Экологически чистая пряжа, ручная&nbsp;работа. Доступны в шести расцветках и трёх размерах.</p>
               <div class="promo__wrapper">
                 <dl class="promo__describe">
-                  <dt class="promo__argument">Цвет:</dt>
-                  <dd class="promo__comment promo__comment--color">тиффани/серый</dd>
+                  <dt class="promo__argument  promo__argument--color">Цвет:</dt>
+                  <dd class="promo__comment">тиффани/серый</dd>
                 </dl>
                 <dl class="promo__describe">
                   <dt class="promo__argument">Диаметр:</dt>
-                  <dd class="promo__comment">25 см</dd>
+                  <dd class="promo__comment promo__comment--unit">25 см</dd>
                 </dl>
                 <dl class="promo__describe">
-                  <dt class="promo__argument">Высота:</dt>
-                  <dd class="promo__comment promo__comment--height">15 см</dd>
+                  <dt class="promo__argument promo__argument--height">Высота:</dt>
+                  <dd class="promo__comment promo__comment--unit">15 см</dd>
                 </dl>
               </div>
               <div class="promo__picture-wrapper">
@@ -193,7 +193,7 @@
                         fill="#63D1BB" />
                     </svg>
                   </div>
-                  <p class="advantages__description description description--bold">Увеличивает лайки на фотографиях</p>
+                  <p class="advantages__description description description--bold description--heart">Увеличивает лайки на фотографиях</p>
                 </li>
                 <li class="advantages__item advantages__item--tangle">
                   <div class="advantages__icon-wrapper advantages__icon-wrapper--tangle">
@@ -235,7 +235,7 @@
                         fill="#63D1BB" />
                     </svg>
                   </div>
-                  <p class="advantages__description description description--bold">Связано вручную с&nbsp;любовью и умилением</p>
+                  <p class="advantages__description description description--bold description--tangle">Связано вручную с&nbsp;любовью и умилением</p>
                 </li>
                 <li class="advantages__item advantages__item--rocket">
                   <div class="advantages__icon-wrapper advantages__icon-wrapper--rocket">
@@ -248,7 +248,7 @@
                         fill="#63D1BB" />
                     </svg>
                   </div>
-                  <p class="advantages__description description description--bold description--margin">Поддержка отечественного производителя</p>
+                  <p class="advantages__description description description--bold description--rocket">Поддержка отечественного производителя</p>
                 </li>
                 <li class="advantages__item advantages__item--gift">
                   <div class="advantages__icon-wrapper advantages__icon-wrapper--gift">
@@ -266,8 +266,8 @@
           <section class="main-index__section reviews-slider reviews-slider--background">
             <div class="reviews-slider__wrapper">
               <h2 class="reviews-slider__title title title--small">Отзывы</h2>
-              <p class="reviews-slider__description description description--big-height">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В
-              отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
+              <p class="reviews-slider__description description description--big-height">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у&nbsp;популярных инстамамочек.
+              В&nbsp;отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают
               больше лайков!</p>
               <div class="reviews-slider__about-author">
                 <h3 class="reviews-slider__author-name title title--reviews-author">Анастасия Красильникова</h3>
@@ -298,7 +298,7 @@
                   <li class="contacts__item contacts__item--address">
                     <address class="contacts__address">
                       <p class="contacts__item-name">адрес:</p>
-                      <p class="contacts__item-description">г.Санкт-Петербург ул.&nbsp;Большая Конюшенная д.19/8, офис 101</p>
+                      <p class="contacts__item-description">г. Санкт-Петербург ул.&nbsp;Большая Конюшенная д. 19/8, офис 101</p>
                     </address>
                   </li>
                 </ul>
@@ -308,7 +308,7 @@
                   allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Координаты магазина на карте">
                 </iframe>
                 <noscript>
-                  <a class="contacts__link link" href="#">
+                  <a class="contacts__link link link--map" href="#">
                     <picture>
                       <!--<source type="image/webp" media="(min-width: 1150px)"
                         srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x">
@@ -424,7 +424,7 @@
       </footer>
       <div class="modal-container" id="modal-size" aria-hidden="true">
         <div class="modal-container__wrapper">
-          <h2 class="modal-container__title title title--modal title--uppercase">Добавить в корзину</h2>
+          <h2 class="modal-container__title title title--modal title--uppercase">Добавить в&nbsp;корзину</h2>
           <div class="modal-container__form">
             <p class="modal-container__subtitle">Выберите размер:</p>
             <div class="modal-container__size-wrapper">

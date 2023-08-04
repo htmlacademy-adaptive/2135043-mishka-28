@@ -7,6 +7,7 @@
   background-color: $white;
   color: $dark-gray;
   outline: 2px solid $dark-gray;
+  outline-offset: -2px;
   border: none;
   padding: 16px 30px;
   text-align: center;
@@ -100,8 +101,9 @@
       border: none;
 
       &::after {
+        width: 46px;
         top: 23px;
-        left: 10px;
+        left: 14px;
       }
     }
   }
@@ -109,14 +111,15 @@
   &--reviews {
     @media (min-width: $tablet-width) {
       position: absolute;
+      font-size: 17px;
       width: 175px;
       padding: 16px 26px;
-      top: 83px;
+      top: 79px;
       right: 0;
     }
 
     @media (min-width: $desktop-width) {
-      top: 78px;
+      top: 79px;
     }
   }
 
@@ -126,6 +129,7 @@
 
     @media (min-width: $tablet-width) {
       min-width: 230px;
+      font-size: 17px;
     }
   }
 
@@ -137,23 +141,28 @@
     @media (min-width: $tablet-width) {
       font-size: 17px;
     }
+
+    @media (min-width: $desktop-width) {
+      max-width: 230px;
+    }
   }
 
   &--form {
     min-width: 260px;
+    font-size: 17px;
+    line-height: 16px;
+    padding: 18px 37px;
 
     @media (min-width: $tablet-width) {
       min-width: 230px;
+      max-width: 230px;
       padding: 18px 32px;
-      font-size: 17px;
-      line-height: 16px;
     }
   }
 
   &--promo {
     font-size: 17px;
     border: none;
-    outline: 2px solid $dark-gray;
   }
 
   &--modal {
