@@ -169,7 +169,8 @@
   left: 0;
   right: 0;
   margin: auto;
-  background: url("../img/stack/icon-video-button.svg") no-repeat center center / cover;
+  background-color: inherit;
+  background-image: url("../img/stack.svg#icon-video-button");
   border: none;
   cursor: pointer;
   transition: transform 0.5s, opacity 0.5s;

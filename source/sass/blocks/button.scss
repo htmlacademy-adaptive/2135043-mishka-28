@@ -224,15 +224,31 @@
     height: 19px;
     top: 0;
     left: 0;
-    background: url("../img/stack/icon-basket.svg") no-repeat center top / cover;
-    opacity: 20%;
+    mask-image: url("../img/stack.svg#icon-basket");
+    mask-repeat: no-repeat;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    transition: background-color 0.5s, opacity 0.5s;
   }
 
   &:hover {
     background-color: $white;
   }
 
+  &:focus-visible {
+    outline: 2px solid $tiffany;
+    outline-offset: 2px;
+  }
+
   &:active {
     background-color: $white;
   }
+}
+
+.button--basket:hover::after {
+  background-color: $tiffany-button;
+}
+
+.button--basket:active::after {
+  background-color: $tiffany-button;
+  opacity: 30%;
 }

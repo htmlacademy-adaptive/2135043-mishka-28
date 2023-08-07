@@ -29,7 +29,7 @@
         left: 0;
         bottom: -12px;
         z-index: 2;
-        background: url("../img/stack/zigzag-hero-tablet.svg") no-repeat center center / cover;
+        background: url("../img/stack.svg#zigzag-hero-tablet") no-repeat center center / cover;
       }
     }
   }
@@ -40,7 +40,7 @@
 
     &--zigzag {
       &::after {
-        background: url("../img/stack/zigzag-hero-desktop.svg") no-repeat center center / contain;
+        background: url("../img/stack.svg#zigzag-hero-desktop") no-repeat center center / contain;
         height: 34px;
         bottom: -17px;
       }

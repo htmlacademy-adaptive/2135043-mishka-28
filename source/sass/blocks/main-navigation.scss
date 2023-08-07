@@ -193,7 +193,7 @@
   }
 
   &:hover {
-    opacity: 60%;
+    color: rgba($color: #000000, $alpha: 0.6);
   }
 
   &:focus-visible {
@@ -202,7 +202,7 @@
   }
 
   &:active {
-    opacity: 30%;
+    color: rgba($color: #000000, $alpha: 0.3);
   }
 }
 

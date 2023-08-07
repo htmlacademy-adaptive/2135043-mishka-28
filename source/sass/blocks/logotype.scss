@@ -60,10 +60,8 @@
       left: 0;
       width: 86px;
       height: 35px;
-      background-image: url("../img/stack/mishka-logo-line.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
+      mask-image: url("../img/stack.svg#mishka-logo-line");
+      background-color: $black;
     }
   }
 
@@ -80,10 +78,8 @@
       left: 0;
       width: 113px;
       height: 46px;
-      background-image: url("../img/stack/mishka-background-tablet.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
+      mask-image: url("../img/stack.svg#mishka-background-tablet");
+      background-color: $black;
     }
   }
 
@@ -100,10 +96,8 @@
       left: 0;
       width: 149px;
       height: 72px;
-      background-image: url("../img/stack/mishka-background-desktop.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
+      mask: url("../img/stack.svg#mishka-background-desktop");
+      background-color: $black;
     }
   }
 }
