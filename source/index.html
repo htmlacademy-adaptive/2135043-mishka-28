@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
     <link rel="icon" href="favicons/favicon-32x32.png" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicons/apple-icon-180x180.png"> <!-- 180×180 -->
@@ -310,10 +310,10 @@
                 <noscript>
                   <a class="contacts__link link link--map" href="#">
                     <picture>
-                      <!--<source type="image/webp" media="(min-width: 1150px)"
+                      <source type="image/webp" media="(min-width: 1150px)"
                         srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x">
                       <source type="image/webp" media="(min-width: 768px)" srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x">
-                      <source type="image/webp" srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x">-->
+                      <source type="image/webp" srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x">
                       <source media="(min-width: 1150px)" srcset="img/map/map-desktop.jpg 1x, img/map/map-desktop@2x.jpg 2x">
                       <source media="(min-width: 768px)" srcset="img/map/map-tablet.jpg 1x, img/map/map-tablet@2x.jpg 2x">
                       <img class="contacts__picture" src="img/map/map-mobile.jpg" srcset="img/map/map-mobile@2x.jpg 2x" width="320"
@@ -428,20 +428,17 @@
           <div class="modal-container__form">
             <p class="modal-container__subtitle">Выберите размер:</p>
             <div class="modal-container__size-wrapper">
-              <label class="modal-container__size" for="size-s">
+              <label class="modal-container__size" for="size-s">s
                 <input class="visually-hidden modal-container__control-input" type="checkbox" id="size-s" value="S" name="size-s" checked>
                 <span class="modal-container__control-mark"></span>
-                <span class="modal-container__control-label">S</span>
               </label>
-              <label class="modal-container__size" for="size-m">
+              <label class="modal-container__size" for="size-m">m
                 <input class="visually-hidden modal-container__control-input" type="checkbox" id="size-m" value="M" name="size-m">
                 <span class="modal-container__control-mark"></span>
-                <span class="modal-container__control-label">M</span>
               </label>
-              <label class="modal-container__size" for="size-l">
+              <label class="modal-container__size" for="size-l">l
                 <input class="visually-hidden modal-container__control-input" type="checkbox" id="size-l" value="L" name="size-l">
                 <span class="modal-container__control-mark"></span>
-                <span class="modal-container__control-label">L</span>
               </label>
             </div>
             <a class="modal-container__button button button--modal" href="#close">Добавить</a>

@@ -17,6 +17,10 @@
 }
 
 .modal-container__wrapper {
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
   position: relative;
   margin: auto;
   display: flex;
@@ -29,6 +33,7 @@
   background-color: $white;
   color: $dark-gray;
   text-align: center;
+  text-transform: uppercase;
   z-index: 4;
   border-top: 1px solid $modal-gray;
   border-bottom: 1px solid $modal-gray;
@@ -75,8 +80,10 @@
 .modal-container__size {
   position: relative;
   display: block;
+  text-align: center;
   min-width: 82px;
   min-height: 52px;
+  padding: 18px 22px;
 
   @media (min-width: $tablet-width) {
     min-width: 112px;
@@ -92,7 +99,7 @@
   content: "";
   top: 0;
   left: 0;
-  width: 82px;
+  min-width: 82px;
   min-height: 52px;
   border: 2px solid rgba(68, 68, 68, 0.1);
   background-color: inherit;
@@ -106,8 +113,8 @@
   position: absolute;
   display: block;
   content: "";
-  width: 38px;
-  height: 16px;
+  min-width: 38px;
+  min-height: 16px;
   top: 0;
   bottom: 0;
   left: 0;

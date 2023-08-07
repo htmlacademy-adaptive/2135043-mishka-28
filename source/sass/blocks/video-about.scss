@@ -18,6 +18,7 @@
   min-width: 260px;
   min-height: 503px;
   outline: 1px solid $light-gray;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     min-width: 668px;
@@ -118,8 +119,8 @@
   @media (min-width: $desktop-width) {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    padding: 13px 36px 58px 79px;
-    min-height: 297px;
+    padding: 13px 36px 57px 79px;
+    min-height: 296px;
     gap: 50px;
   }
 }
@@ -128,7 +129,7 @@
   position: relative;
   min-width: 260px;
   min-height: 150px;
-
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     min-width: 668px;
@@ -145,12 +146,8 @@
 }
 
 .video-about__poster {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+  min-width: 260px;
+  min-height: 150px;
 
   @media (min-width: $tablet-width) {
     min-width: 668px;
@@ -187,7 +184,9 @@
   }
 
   &:focus-visible {
-    outline: 2px solid $black;
+    opacity: 60%;
+    border: none;
+    outline: none;
   }
 
   &:active {
