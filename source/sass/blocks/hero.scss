@@ -1,14 +1,14 @@
 .hero {
   width: 100%;
   min-height: 489px;
-  background-image: url("../img/hero/hero-picture.jpg");
+  background-image: url("../img/hero/hero-picture.webp");
   background-repeat: no-repeat;
   background-size: 569px 373px;
   background-position: center top -18px;
   background-color: rgba($color: $light-gray, $alpha: 0.25);
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/hero/hero-picture@2x.jpg");
+    background-image: url("../img/hero/hero-picture@2x.webp");
     background-size: 569px 373px;
     background-color: rgba(236, 236, 236, 0.25);
   }
