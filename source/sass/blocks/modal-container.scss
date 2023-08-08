@@ -79,11 +79,10 @@
 
 .modal-container__size {
   position: relative;
-  display: block;
-  text-align: center;
+  display: grid;
+  grid-template-columns: auto;
   min-width: 82px;
   min-height: 52px;
-  padding: 18px 22px;
 
   @media (min-width: $tablet-width) {
     min-width: 112px;
@@ -95,36 +94,19 @@
 }
 
 .modal-container__control-mark {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  display: block;
   min-width: 82px;
   min-height: 52px;
+  padding: 17px 22px;
+  text-align: center;
   border: 2px solid rgba(68, 68, 68, 0.1);
   background-color: inherit;
 
   @media (min-width: $tablet-width) {
     width: 112px;
   }
-}
-
-.modal-container__control-label {
-  position: absolute;
-  display: block;
-  content: "";
-  min-width: 38px;
-  min-height: 16px;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  font-family: "Open Sans Bold", "Arial", sans-serif;
-  font-size: 17px;
-  line-height: 16px;
-  font-weight: 700;
-  text-align: center;
 }
 
 .modal-container__control-input[type="checkbox"]:checked + .modal-container__control-mark {
