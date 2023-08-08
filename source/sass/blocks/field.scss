@@ -1,35 +1,131 @@
 .field {
   display: block;
   min-width: 260px;
+  min-height: 52px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 17px;
   line-height: 18px;
-  padding: 17px 0;
-  border: none;
+  padding: 17px 2px 17px 1px;
+  border: 0;
   box-shadow: 0 -2px 0 0 $black inset;
-  background-color: $white;
+  background-color: inherit;
   resize: none;
-  transition: outline 0.5s;
+  transition: box-shadow 0.5s;
 
   &::placeholder {
     color: $black;
     opacity: 30%;
   }
 
+  &:hover {
+    box-shadow: 0 -2px 0 0 $tiffany-link inset;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 -2px 0 0 $tiffany-link inset;
+    outline: none;
+  }
+
+  &:active {
+    box-shadow: 0 -2px 0 0 $tiffany-link inset;
+  }
+
   &--phone {
     padding: 14px 35px 20px 0;
+
+    &:hover + .fieldset-information__icon-wrapper {
+      color: $tiffany-link;
+      opacity: 1;
+    }
+
+    &:active + .fieldset-information__icon-wrapper {
+      color: $tiffany-link;
+      opacity: 1;
+    }
   }
 
   &--email {
     padding: 16px 38px 18px 0;
+
+    &:hover + .fieldset-information__icon-wrapper {
+      color: $tiffany-link;
+      opacity: 1;
+    }
+
+    &:active + .fieldset-information__icon-wrapper {
+      color: $tiffany-link;
+      opacity: 1;
+    }
   }
 
   &--textarea {
-    min-width: 260px;
+    display: inline-block;
+    width: 100%;
     min-height: 142px;
-    padding: 17px;
+    padding: 16px;
     border: 2px solid $dark-gray;
     box-shadow: none;
+    transition: border 0.5s;
+
+    &:hover {
+      border: 2px solid $tiffany-link;
+      box-shadow: none;
+    }
+
+    &:focus-visible {
+      border: 2px solid $tiffany-link;
+      box-shadow: none;
+    }
+
+    &:active {
+      border: 2px solid $tiffany-link;
+      box-shadow: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 375px;
+    max-height: 52px;
+    padding: 17px 16px;
+    font-size: 19px;
+    align-self: flex-end;
+
+    &--big {
+      min-width: 428px;
+    }
+
+    &--phone {
+      min-width: 501px;
+      max-width: 501px;
+      padding: 14px 55px 20px 17px;
+      justify-self: flex-end;
+    }
+
+    &--email {
+      min-width: 501px;
+      max-width: 501px;
+      padding: 15px 60px 19px 18px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 573px;
+
+    &--big {
+      min-width: 626px;
+    }
+
+    &--phone {
+      min-width: 700px;
+      max-width: 700px;
+      padding: 14px 40px 20px 17px;
+    }
+
+    &--email {
+      min-width: 700px;
+      max-width: 700px;
+      padding: 15px 40px 19px 18px;
+    }
   }
 }

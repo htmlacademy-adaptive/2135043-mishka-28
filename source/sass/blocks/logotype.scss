@@ -1,31 +1,120 @@
 .logotype {
   display: block;
-  position: relative;
-  width: 320px;
-  height: 80px;
+  min-width: 100%;
+  min-height: 100%;
   padding: 22px 118px 22px 116px;
   color: $black;
   background-color: $white;
+  transition: opacity 0.5s;
 
-  &::after {
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:focus-visible {
+    opacity: 60%;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
+  @media (min-width: $tablet-width) {
     position: absolute;
-    content: "";
+    min-width: 48.3%;
+    min-height: 87px;
+    max-height: 87px;
     top: 0;
-    bottom: 0;
     left: 0;
-    right: 0;
-    margin: auto;
-    width: 86px;
-    height: 35px;
-    background: url("../img/stack/mishka-logo-line.svg");
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
+    z-index: 2;
+    padding: 22px 209px 20px 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 296px;
+    top: 0;
+    left: 53%;
+    transform: translateX(-53%);
+    z-index: 2;
+    padding: 9px 100px 7px 46px;
+    border-right: none;
+  }
+}
+
+.logotype__wrapper {
+  position: relative;
+  display: block;
+  min-width: 86px;
+  min-height: 35px;
+  padding-bottom: 4px;
+  color: $black;
+  background-color: transparent;
+
+  @media (max-width: $mobile-width-only) {
+    &::after {
+      position: absolute;
+      z-index: 3;
+      content: "";
+      bottom: 0;
+      left: 0;
+      width: 86px;
+      height: 35px;
+      mask-image: url("../img/stack.svg#mishka-logo-line");
+      background-color: $black;
+    }
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    min-width: 113px;
+    min-height: 46px;
+    padding: 4px 8px 9px;
+    color: $white;
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      width: 113px;
+      height: 46px;
+      mask-image: url("../img/stack.svg#mishka-background-tablet");
+      background-color: $black;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 149px;
+    min-height: 72px;
+    padding: 18px 21px 19px 24px;
+    color: $white;
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      width: 149px;
+      height: 72px;
+      mask: url("../img/stack.svg#mishka-background-desktop");
+      background-color: $black;
+    }
   }
 }
 
 .logotype__icon {
+  position: absolute;
   display: block;
   width: 86px;
-  height: 30px;
+  height: 31px;
+
+  @media (min-width: $tablet-width) {
+    width: 97px;
+    height: 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 104px;
+    height: 35px;
+  }
 }

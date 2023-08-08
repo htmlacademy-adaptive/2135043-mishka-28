@@ -7,45 +7,86 @@
   padding-inline: 0;
   padding-block: 0;
   border: none;
-}
 
-.fieldset-information__title {
-  display: flex;
-  gap: 24px;
-  min-width: 260px;
-  padding: 9px 0 15px;
-}
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    gap: 110px;
+    padding: 33px 67px 50px 50px;
 
-.fieldset-information__signature {
-  display: flex;
-  gap: 26px;
-}
+    &--color {
+      background-color: $gray;
+      padding: 0;
+    }
 
-.fieldset-information__text-wrapper {
-  display: block;
-  background-color: $white;
-  z-index: 2;
+    &--name {
+      padding: 50px;
+      gap: 106px;
+    }
 
-  &--mail {
-    min-width: 60px;
+    &--contacts {
+      background-color: $gray;
+      padding: 0;
+    }
+
+    &--wishes {
+      padding: 50px 50px 3px;
+      gap: 106px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 54px;
+    padding: 33px 97px 49px 111px;
+
+    &--color {
+      padding: 0;
+    }
+
+    &--name {
+      padding: 48px 210px 50px 111px;
+      gap: 55px;
+    }
+
+    &--contacts {
+      padding: 0;
+    }
+
+    &--wishes {
+      padding: 50px 210px 19px 111px;
+      gap: 52px;
+    }
   }
 }
 
-.fieldset-information__line {
-  @media (max-width: $mobile-width-only) {
-    display: block;
-    width: 100%;
-    position: relative;
+.fieldset-information__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  margin-inline: 0;
+  padding-inline: 0;
+  padding-block: 0;
 
-    &::after {
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 1px;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: $tiffany-link;
+  @media (min-width: $tablet-width) {
+    &--color {
+      flex-direction: row;
+      gap: 106px;
+      padding: 50px;
+    }
+
+    &--contacts {
+      padding: 50px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--color {
+      gap: 53px;
+      padding: 46px 89px 52px 111px;
+    }
+
+    &--contacts {
+      padding: 50px 210px 50px 111px;
     }
   }
 }
@@ -61,41 +102,166 @@
   margin-block: 0;
   padding-inline: 0;
   list-style-type: none;
-}
+  margin: 0 auto;
 
-.fieldset-information__list--radio {
-  gap: 24px;
-  padding: 15px 0 34px;
-}
+  @media (min-width: $tablet-width) {
+    font-size: 19px;
+    line-height: 18px;
+  }
 
-.fieldset-information__list--checkbox {
-  gap: 43px;
-  padding: 20px 0 34px;
+  &--radio {
+    min-width: 260px;
+    gap: 12px;
+    padding: 19px 0 25px;
+
+    @media (min-width: $tablet-width) {
+      gap: 24px;
+      padding: 1px 0 0 0;
+      max-width: 331px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 24px;
+      min-width: 800px;
+      max-width: 800px;
+    }
+  }
+
+  &--checkbox {
+    gap: 23px;
+    padding: 10px 0 24px;
+    min-width: 260px;
+
+    @media (min-width: $tablet-width) {
+      min-width: 491px;
+      max-width: 491px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px 35px;
+      padding: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      min-width: 828px;
+      max-width: 828px;
+      padding-right: 48px;
+      grid-template-columns: repeat(3, auto);
+      gap: 24px 50px;
+    }
+  }
+
+  &--name {
+    gap: 22px;
+    padding: 14px 0 26px;
+
+    @media (min-width: $tablet-width) {
+      padding: 2px 0 0 0;
+      gap: 24px;
+      max-width: 501px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 700px;
+    }
+  }
+
+  &--contacts {
+    min-width: 260px;
+    gap: 35px;
+    padding: 8px 0 25px;
+
+    @media (min-width: $tablet-width) {
+      min-width: 668px;
+      max-width: 668px;
+      flex-direction: row;
+      gap: 24px;
+      padding: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      min-width: 828px;
+      max-width: 828px;
+    }
+  }
 }
 
 .fieldset-information__control {
   position: relative;
   display: block;
-  padding-left: 60px;
+  padding: 11px 0 9px 60px;
+
+  &--big {
+    padding: 1px 0 1px 60px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 17px 0 17px 76px;
+
+    &--checkbox {
+      padding: 16px 0 17px 81px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 15px 0 19px 80px;
+
+    &--checkbox {
+      padding: 19px 0 15px 82px;
+    }
+  }
+}
+
+.fieldset-information__control-input ~ span {
+  cursor: pointer;
+  transition: border 0.5s;
 }
 
 .fieldset-information__control-mark {
   position: absolute;
   content: "";
-  top: -10px;
+  top: 0;
   left: 0;
   width: 38px;
   height: 38px;
-  outline: 2px solid $dark-gray;
-  background-color: $white;
+  border: 2px solid $dark-gray;
+  background-color: inherit;
+
+  @media (min-width: $tablet-width) {
+    width: 52px;
+    height: 52px;
+  }
 }
 
 .fieldset-information__control-mark--radio {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .fieldset-information__control-mark--radio-big {
   top: -3px;
+
+  @media (min-width: $tablet-width) {
+    top: 0;
+  }
+}
+
+.fieldset-information__control-label--radio {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    gap: 5px;
+  }
 }
 
 .fieldset-information__control-input[type="radio"]:checked + .fieldset-information__control-mark--radio {
@@ -111,6 +277,11 @@
     left: 0;
     right: 0;
     margin: auto;
+
+    @media (min-width: $tablet-width) {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
 
@@ -118,44 +289,121 @@
   &::before {
     position: absolute;
     content: "";
-    width: 23px;
-    height: 16px;
+    width: 29px;
+    height: 22px;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
-    background: url("../img/stack/icon-checkbox.svg") no-repeat center center / cover;
+    background: url("../img/stack.svg#icon-checkbox") no-repeat center center / cover;
   }
 }
 
-.fieldset-information__list--name {
-  gap: 22px;
-  padding: 14px 0 26px;
+.fieldset-information__control-input:hover + .fieldset-information__control-mark {
+  border: 2px solid $tiffany-link;
 }
 
-.fieldset-information__list--contacts {
-  gap: 35px;
-  padding: 9px 0 26px;
+.fieldset-information__control-input:focus-visible + .fieldset-information__control-mark {
+  border: 2px solid $tiffany-link;
+}
+
+.fieldset-information__control-input:active + .fieldset-information__control-mark {
+  border: 2px solid rgba($color: #000000, $alpha: 0.3);
+}
+
+.fieldset-information__control-input:disabled ~ span {
+  opacity: 10%;
 }
 
 .fieldset-information__item {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    &--accessories {
+      grid-column: 1 / 2;
+    }
+
+    &--toys {
+      grid-column: 1 / 2;
+    }
+  }
+
+  &--name {
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+      gap: 24px;
+    }
+  }
+
+  &--contacts {
+    gap: 4px;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+      gap: 76px;
+    }
+
+    @media (min-width: $desktop-width) {
+      gap: 22px;
+    }
+  }
 }
 
-.fieldset-information__item--contacts {
+.fieldset-information__signature {
+  display: flex;
+  gap: 26px;
+  text-align: left;
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--tiffany {
+    color: $tiffany-button;
+    font-size: 17px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 16px;
+    max-width: 91px;
+
+    &--tiffany {
+      min-width: 91px;
+    }
+
+    &--name {
+      min-width: 49px;
+      max-width: 49px;
+    }
+
+    &--surname {
+      min-width: 101px;
+      max-width: 101px;
+    }
+
+    &--patronymic {
+      min-width: 100px;
+      max-width: 100px;
+    }
+  }
+}
+
+.fieldset-information__input-wrapper {
   position: relative;
-}
+  max-width: 260px;
 
+  @media (min-width: $tablet-width) {
+    max-width: 501px;
+    align-self: flex-end;
+  }
 
-.fieldset-information__signature--uppercase {
-  text-transform: uppercase;
-}
-
-.fieldset-information__signature--tiffany {
-  color: $tiffany-button;
+  @media (min-width: $tablet-width) {
+    max-width: 700px;
+  }
 }
 
 .fieldset-information__icon-wrapper {
@@ -165,13 +413,31 @@
   height: 24px;
   bottom: 17px;
   right: 7px;
-}
+  color: $black;
+  opacity: 20%;
 
-.fieldset-information__icon-wrapper--email {
-  width: 32px;
-  height: 21px;
-  bottom: 15px;
-  right: 3px;
+  &--email {
+    width: 32px;
+    height: 21px;
+    bottom: 15px;
+    right: 3px;
+  }
+
+  @media (min-width: $tablet-width) {
+    right: 26px;
+
+    &--email {
+      right: 22px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 8px;
+
+    &--email {
+      right: 4px;
+    }
+  }
 }
 
 .fieldset-information__icon {
@@ -184,15 +450,28 @@
   left: 0;
   right: 0;
   margin: auto;
-  color: $black;
-  opacity: 20%;
+
+  &--email {
+    width: 32px;
+    height: 21px;
+  }
 }
 
-.fieldset-information__icon--email {
-  width: 32px;
-  height: 21px;
-}
 
 .fieldset-information__textarea-wrapper {
-  padding: 8px 0 7px;
+  display: block;
+  min-width: 260px;
+  min-height: 142px;
+  padding: 8px 0 0 0;
+
+  @media (min-width: $tablet-width) {
+    min-width: 500px;
+    max-width: 500px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 700px;
+    max-width: 700px;
+  }
 }

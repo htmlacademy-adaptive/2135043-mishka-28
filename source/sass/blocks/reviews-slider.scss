@@ -1,5 +1,28 @@
 .reviews-slider {
   width: 100%;
+  background-color: $white;
+
+  &--background {
+    @media (min-width: $tablet-width) {
+      padding: 0 50px 37px;
+      min-height: 494px;
+      background: url("../img/reviews/review.jpg");
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 350px 457px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/reviews/review@2x.jpg");
+        background-size: 350px 457px;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0 50px 36px;
+      min-height: 493px;
+      background-position: 50px top;
+    }
+  }
 }
 
 .reviews-slider__wrapper {
@@ -9,12 +32,40 @@
   flex-direction: column;
   gap: 14px;
   padding: 13px 30px 14px;
+  margin: 0 auto;
+  background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    min-height: 457px;
+    padding: 84px 0 47px;
+    gap: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 79px 0 94px 174px;
+    gap: 35px;
+  }
+}
+
+.reviews-slider__title {
+  @media (min-width: $tablet-width) {
+    padding-right: 180px;
+  }
 }
 
 .reviews-slider__description {
   margin-block: 0;
   margin-bottom: 19px;
   text-align: left;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 7px;
+  }
 }
 
 .reviews-slider__about-author {
@@ -23,6 +74,17 @@
   flex-wrap: wrap;
   margin-bottom: 16px;
   color: $black;
+  font-size: 17px;
+  line-height: 30px;
+  margin-top: 1px;
+  gap: 3px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 58px;
+    gap: 4px;
+    margin: 0;
+    padding: 2px 180px 0 0;
+  }
 }
 
 .reviews-slider__author-name {
@@ -34,4 +96,19 @@
   flex-wrap: wrap;
   width: 260px;
   height: 52px;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    width: 157px;
+    height: 52px;
+    gap: 10px;
+    right: 6px;
+    bottom: 49px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: 98px;
+  }
 }

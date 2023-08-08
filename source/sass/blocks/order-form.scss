@@ -4,13 +4,30 @@
   flex-wrap: wrap;
   flex-direction: column;
   padding: 10px 30px 45px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .order-form__button-wrapper {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  justify-content: center;
   gap: 30px;
   width: 100%;
   padding: 10px 0;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 109px;
+    padding: 45px 50px 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 25px 225px 47px;
+    gap: 140px;
+  }
 }

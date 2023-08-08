@@ -7,25 +7,85 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+
+  &--zigzag {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 6px;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      background: url("../img/stack.svg#zigzag-line-desktop") no-repeat center center / cover;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &--zigzag {
+      &::before {
+        height: 17px;
+        background-size: contain;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 95px 49px 105px;
+
+    &--zigzag {
+      &::before {
+        background-size: 1052px 34px;
+        height: 24px;
+      }
+    }
+  }
 }
 
 .contacts__information {
-  position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 28px;
   padding: 44px 30px 62px;
+  margin: 0 auto;
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 6px;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    background: url("../img/stack/zigzag-line-desktop.svg.svg") no-repeat center / cover;
+  @media (min-width: $tablet-width) {
+    padding: 85px 50px 49px;
+    gap: 49px;
+
+    &--flag {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 47px;
+        height: 81px;
+        top: 63px;
+        right: 53px;
+        z-index: 2;
+        background: url("../img/stack.svg#icon-flag") no-repeat center center / cover;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+    flex-direction: column;
+    gap: 35px;
+    padding: 79px 23px 42px 175px;
+
+    &--flag {
+      &::after {
+        top: 62px;
+        left: 64px;
+      }
+    }
   }
 }
 
@@ -37,24 +97,53 @@
   margin-block: 0;
   padding-inline: 0;
   list-style-type: none;
+  font-size: 14px;
+  line-height: 30px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    gap: 52px;
+    font-size: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    gap: 30px;
+  }
 }
 
 .contacts__item {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 32px;
   font-size: 14px;
   line-height: 30px;
-}
 
-.contacts__item-name {
-  margin: 0;
+  @media (min-width: $tablet-width) {
+    max-width: 318px;
+    font-size: 17px;
+    gap: 24px;
+  }
 }
 
 .contacts__address {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 33px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 318px;
+    gap: 25px;
+  }
+}
+
+.contacts__item-name {
+  margin: 0;
+  max-width: 44px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 55px;
+  }
 }
 
 .contacts__item-description {
@@ -63,22 +152,103 @@
   flex-direction: column;
   margin-block: 0;
   padding-inline: 0;
+  max-width: 183px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 230px;
+  }
 }
 
 .contacts__map-wrapper {
+  position: relative;
   display: block;
   width: 100%;
   min-height: 454px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 457px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    max-width: 527px;
+    max-height: 457px;
+  }
 }
 
 .contacts__map {
+  position: absolute;
   display: block;
   border: 0;
   width: 100%;
-  min-height: 454px;
+  height: 100%;
+  top: 0;
+  left: 0;
   cursor: pointer;
+}
+
+.contacts__link {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 320px;
+  min-height: 454px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 768px;
+    min-height: 457px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 527px;
+    min-height: 457px;
+    max-height: 457px;
+  }
+}
+
+.contacts__picture {
+  min-width: 320px;
+  min-height: 454px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 768px;
+    max-height: 457px;
+    min-height: 457px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 527px;
+  }
+}
+
+.contacts__icon {
+  position: absolute;
+  width: 67px;
+  height: 100px;
+  top: 145px;
+  left: 138px;
+
+  @media (min-width: $tablet-width) {
+    top: 139px;
+    left: 363px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 146px;
+    left: 239px;
+  }
 }
 
 .contacts__button-wrapper {
   padding: 42px 30px 39px;
+
+  @media (min-width: $tablet-width) {
+    padding: 55px 269px 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 41px 119px 0 175px;
+  }
 }

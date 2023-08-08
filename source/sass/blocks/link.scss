@@ -1,9 +1,16 @@
 .link {
+  display: block;
   font-family: "Open Sans Bold", "Arial", sans-serif;
   font-size: 19px;
   line-height: 24px;
   font-weight: 700;
   color: $black;
+  transition: color 0.5s, opacity 0.5s, background-color 0.5s;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   &--light {
     color: $white;
@@ -11,10 +18,36 @@
 
   &--background {
     background-color: $tiffany;
+
+    &:hover {
+      background-color: $tiffany-link-hover;
+    }
+
+    &:focus-visible {
+      background-color: $tiffany-link-hover;
+      outline: none;
+    }
+
+    &:active {
+      background-color: $tiffany-link-hover;
+    }
   }
 
   &--background-dark {
     background-color: $tiffany-dark;
+
+    &:hover {
+      background-color: $tiffany-hover;
+    }
+
+    &:focus-visible {
+      background-color: $tiffany-hover;
+      outline: none;
+    }
+
+    &:active {
+      background-color: $tiffany-hover;
+    }
   }
 
   &--small {
@@ -24,26 +57,17 @@
     font-weight: 400;
   }
 
+  &--small-font {
+    font-size: 19px;
+  }
+
   &--small-height {
     line-height: 18px;
   }
 
-  &--line {
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: "";
-      width: 167px;
-      height: 1px;
-      left: 0;
-      bottom: 0;
-      background-color: $tiffany-link;
-    }
-  }
-
   &--search {
     position: relative;
+    padding: 29px 30px 27px 76px;
 
     &::after {
       position: absolute;
@@ -52,21 +76,199 @@
       height: 18px;
       top: 32px;
       left: 32px;
-      background: url("../img/stack/icon-search.svg") no-repeat center center / cover;
+      mask-image: url("../img/stack.svg#icon-search");
+      background-color: rgba($color: #000000, $alpha: 0.2);
+      transition: background-color 0.5s, opacity 0.5s;
+    }
+
+    &:hover::after {
+      background-color: $tiffany-button;
+    }
+
+    &:focus-visible::after {
+      background-color: $tiffany-button;
+    }
+
+    &:active::after {
+      background-color: $tiffany-button;
+      opacity: 30%;
+    }
+
+    @media (min-width: $tablet-width) {
+      min-width: 80px;
+      min-height: 100%;
+      padding: 36px 30px 36px 30px;
+      font-size: 17px;
+      line-height: 24px;
+
+      &::after {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
     }
   }
 
   &--basket {
     position: relative;
+    padding: 29px 30px 27px 76px;
 
     &::after {
       position: absolute;
       content: "";
       width: 21px;
       height: 18px;
-      top: 31px;
+      top: 50%;
+      transform: translateY(-50%);
       left: 30px;
-      background: url("../img/stack/icon-basket.svg") no-repeat center center / cover;
+      mask-image: url("../img/stack.svg#icon-basket");
+      background-color: rgba($color: #000000, $alpha: 0.2);
+    }
+
+    &:hover::after {
+      background-color: $tiffany-button;
+    }
+
+    &:focus-visible::after {
+      background-color: $tiffany-button;
+    }
+
+    &:active::after {
+      background-color: $tiffany-button;
+      opacity: 30%;
+    }
+
+    @media (min-width: $tablet-width) {
+      min-width: 78%;
+      max-width: 314px;
+      min-height: 88px;
+      padding: 33px 50px 31px 56px;
+      font-size: 17px;
+      line-height: 24px;
+      text-align: right;
+
+      &::after {
+        left: 31px;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      min-width: 316px;
+      max-width: 316px;
+    }
+  }
+
+  &--catalog {
+    padding: 29px 30px 26px 76px;
+
+    @media (min-width: $tablet-width) {
+      min-width: 150px;
+      max-width: 150px;
+      min-height: 44px;
+      padding: 10px 6px;
+      font-size: 15px;
+      line-height: 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 17px;
+      min-width: 195px;
+      min-height: 42px;
+      padding: 33px 34px 31px 10px;
+    }
+  }
+
+  &--knitting {
+    padding: 28px 30px 26px 76px;
+
+    @media (min-width: $tablet-width) {
+      min-width: 160px;
+      max-width: 160px;
+      min-height: 44px;
+      padding: 10px 7px 10px 7px;
+      font-size: 15px;
+      line-height: 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 17px;
+      min-width: 202px;
+      min-height: 42px;
+      padding: 33px 10px 31px 30px;
+    }
+  }
+
+  &--new {
+    @media (min-width: $desktop-width) {
+      min-width: 179px;
+      min-height: 42px;
+      padding: 9px 10px;
+      font-size: 15px;
+      line-height: 24px;
+    }
+  }
+
+  &--sale {
+    @media (min-width: $desktop-width) {
+      min-width: 130px;
+      min-height: 42px;
+      padding: 9px 10px;
+      font-size: 15px;
+      line-height: 24px;
+    }
+  }
+}
+
+.link--line {
+  position: relative;
+  max-width: 169px;
+  transition: color 0.5s, outline 0.5s;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    left: 0;
+    top: 26px;
+    background-color: $tiffany-link;
+  }
+
+  &:hover {
+    color: $tiffany-hover;
+  }
+
+  &:focus-visible {
+    color: $tiffany-hover;
+    outline: 2px solid $tiffany-link;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    color: $tiffany-hover;
+
+    &::after {
+      opacity: 10%;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    margin-bottom: 60px;
+    max-width: 205px;
+
+    &::after {
+      top: 30px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+
+    &::after {
+      top: 34px;
     }
   }
 }

@@ -1,8 +1,17 @@
 .note {
-  width: 100%;
+  min-width: 260px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   text-align: left;
+
+  @media (min-width: $tablet-width) {
+    min-width: 329px;
+    max-width: 329px;
+    text-align: right;
+    font-size: 17px;
+    line-height: 30px;
+    padding-top: 11px;
+  }
 }

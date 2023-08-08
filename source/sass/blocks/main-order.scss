@@ -1,5 +1,6 @@
 .main-order {
   width: 100%;
+  flex-grow: 1;
 }
 
 .main-order__wrapper {
@@ -20,12 +21,30 @@
 
 .main-order__title {
   min-width: 320px;
-  padding: 74px 22px;
+  padding: 73px 22px;
   background-color: $gray;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    min-width: 768px;
+    padding: 34px 175px 75px 176px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 1150px;
+    padding: 39px 321px 96px 323px;
+  }
 }
 
 .main-order__description {
   min-width: 320px;
   padding: 17px 30px 10px;
+
+  @media (min-width: $tablet-width) {
+    padding: 66px 50px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 116px 223px 30px 225px;
+  }
 }

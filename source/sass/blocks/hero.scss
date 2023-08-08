@@ -1,24 +1,81 @@
 .hero {
   width: 100%;
-  min-height: 500px;
-  background-image: url("../img/hero/hero-picture.jpg");
+  min-height: 489px;
+  background-image: url("../img/hero/hero-picture.webp");
   background-repeat: no-repeat;
-  background-size: 568px 369px;
-  background-position: top center;
+  background-size: 569px 373px;
+  background-position: center top -18px;
+  background-color: rgba($color: $light-gray, $alpha: 0.25);
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero/hero-picture@2x.webp");
+    background-size: 569px 373px;
+    background-color: rgba(236, 236, 236, 0.25);
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 679px;
+    background-size: 1150px 746px;
+    background-position: center bottom;
+
+    &--zigzag {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 24px;
+        left: 0;
+        bottom: -12px;
+        z-index: 2;
+        background: url("../img/stack.svg#zigzag-hero-tablet") no-repeat center center / cover;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 683px;
+    position: relative;
+
+    &--zigzag {
+      &::after {
+        background: url("../img/stack.svg#zigzag-hero-desktop") no-repeat center center / contain;
+        height: 34px;
+        bottom: -17px;
+      }
+    }
+  }
 }
 
 .hero__wrapper {
   width: 100%;
-  min-height: 500px;
+  min-height: 489px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    min-height: 679px;
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 260px;
+  }
 }
 
 .hero__title {
   text-align: center;
-  padding: 73px 30px 120px;
+  padding: 73px 30px 119px;
+
+  @media (min-width: $tablet-width) {
+    padding: 90px 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 95px 225px;
+  }
 }
 
 .hero__list {
@@ -28,12 +85,28 @@
   list-style-type: none;
   margin-block: 0;
   padding-inline: 0;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    padding: 0 50px;
+  }
 }
 
-.hero-item {
+.hero__item {
   display: block;
   min-width: 320px;
   min-height: 103px;
+  background-color: $tiffany;
+
+  @media (min-width: $tablet-width) {
+    min-width: 334px;
+    min-height: 119px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 525px;
+  }
 }
 
 .hero__link {
@@ -44,22 +117,81 @@
   justify-content: space-between;
   min-width: 320px;
   min-height: 103px;
-  padding: 21px 27px 18px 30px;
+  padding: 23px 27px 15px 30px;
+
+  &:hover {
+    transform: scale(1, 1.05);
+
+    .hero__catalog {
+      transform: scale(1, 1) translate(0, -5px);
+    }
+
+    .hero__icon-wrapper {
+      opacity: 70%;
+      transform: scale(1, 1) translate(0, -5px);
+    }
+  }
+
+  &:focus-visible .hero__icon-wrapper {
+    opacity: 70%;
+    transition: opacity 0.5s;
+  }
+
+  &:active .hero__icon-wrapper {
+    opacity: 30%;
+    transition: opacity 0.5s;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 334px;
+    max-width: 334px;
+    min-height: 119px;
+    gap: 80px;
+    padding: 25px 33px 27px 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 525px;
+    gap: 270px;
+    padding: 25px 35px 27px 36px;
+  }
 }
 
 .hero__catalog {
   width: min-content;
   padding: 1px 0 13px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    max-width: 131px;
+  }
 }
 
-.hero__icon-lamp {
+.hero__icon-wrapper {
   display: block;
   margin: 2px 9px 0 0;
-  opacity: 0.5;
-}
+  max-width: 41px;
+  max-height: 61px;
 
-.hero__icon-toys {
-  display: block;
-  margin-bottom: 4px;
-  opacity: 0.5;
+  @media (min-width: $tablet-width) {
+    margin: 5px 3px 0 0;
+    align-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 5px 1px 0 0;
+  }
+
+  &--toys {
+    margin: 0 0 4px 0;
+    max-width: 61px;
+
+    @media (min-width: $tablet-width) {
+      margin: 1px 0 0 0;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin: 6px 0 0 0;
+    }
+  }
 }
