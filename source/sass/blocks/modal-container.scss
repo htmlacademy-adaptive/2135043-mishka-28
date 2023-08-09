@@ -93,6 +93,10 @@
   cursor: pointer;
 }
 
+.modal-container__control-input:disabled ~ span {
+  opacity: 10%;
+}
+
 .modal-container__control-mark {
   grid-column: 1 / 1;
   grid-row: 1 / 1;
