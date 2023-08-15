@@ -1,5 +1,5 @@
 .title {
-  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 27px;
   line-height: 30px;
   font-weight: 700;
@@ -132,14 +132,15 @@
         min-height: 24px;
         left: 0;
         bottom: -12px;
-        background: url("../img/stack/zigzag-hero-tablet.svg") no-repeat center center / cover;
+        background: url("../img/stack.svg#zigzag-hero-tablet") no-repeat center center / cover;
         z-index: 2;
       }
     }
 
     @media (min-width: $desktop-width) {
       &::after {
-        min-height: 34px;
+        background: url("../img/stack.svg#zigzag-hero-desktop") no-repeat center center / contain;
+        height: 34px;
         bottom: -17px;
       }
     }

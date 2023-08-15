@@ -1,5 +1,5 @@
 .button {
-  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
@@ -24,8 +24,13 @@
   }
 
   &:active {
+    background-color: #444444;
     color: rgba(255, 255, 255, 0.3);
     outline: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
   }
 
   &--prev {
@@ -111,7 +116,6 @@
   &--reviews {
     @media (min-width: $tablet-width) {
       position: absolute;
-      font-size: 17px;
       width: 175px;
       padding: 16px 26px;
       top: 79px;
@@ -129,7 +133,6 @@
 
     @media (min-width: $tablet-width) {
       min-width: 230px;
-      font-size: 17px;
     }
   }
 
@@ -149,7 +152,6 @@
 
   &--form {
     min-width: 260px;
-    font-size: 17px;
     line-height: 16px;
     padding: 18px 37px;
 
@@ -160,17 +162,11 @@
     }
   }
 
-  &--promo {
-    font-size: 17px;
-    border: none;
-  }
-
   &--modal {
     color: $white;
     background-color: $tiffany-button;
     border: 0;
     outline: none;
-    font-size: 17px;
     line-height: 16px;
     padding: 18px 30px;
 

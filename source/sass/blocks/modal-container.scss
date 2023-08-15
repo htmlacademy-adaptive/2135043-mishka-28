@@ -17,7 +17,7 @@
 }
 
 .modal-container__wrapper {
-  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 16px;
   font-weight: 700;
@@ -63,6 +63,8 @@
   font-size: 15px;
   line-height: 30px;
   margin-block: 0;
+  text-transform: none;
+  font-weight: 400;
 
   @media (min-width: $tablet-width) {
     font-size: 17px;
