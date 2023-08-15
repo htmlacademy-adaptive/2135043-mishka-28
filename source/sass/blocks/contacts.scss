@@ -57,6 +57,7 @@
   @media (min-width: $tablet-width) {
     padding: 85px 50px 49px;
     gap: 49px;
+    margin: 0;
 
     &--flag {
       position: relative;
@@ -130,6 +131,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 33px;
+  font-style: normal;
 
   @media (min-width: $tablet-width) {
     max-width: 318px;

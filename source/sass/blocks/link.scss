@@ -1,6 +1,6 @@
 .link {
   display: block;
-  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 19px;
   line-height: 24px;
   font-weight: 700;
@@ -95,7 +95,7 @@
     }
 
     @media (min-width: $tablet-width) {
-      min-width: 80px;
+      min-width: 82px;
       min-height: 100%;
       padding: 36px 30px 36px 30px;
       font-size: 17px;

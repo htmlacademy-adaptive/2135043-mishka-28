@@ -33,29 +33,31 @@
 
   &--phone {
     padding: 14px 35px 20px 0;
+    transition: opacity 0.5s, color 0.5s;
 
     &:hover + .fieldset-information__icon-wrapper {
-      color: $tiffany-link;
       opacity: 1;
+      color: $tiffany-link;
     }
 
     &:active + .fieldset-information__icon-wrapper {
-      color: $tiffany-link;
       opacity: 1;
+      color: $tiffany-link;
     }
   }
 
   &--email {
     padding: 16px 38px 18px 0;
+    transition: opacity 0.5s, color 0.5s;
 
     &:hover + .fieldset-information__icon-wrapper {
-      color: $tiffany-link;
       opacity: 1;
+      color: $tiffany-link;
     }
 
     &:active + .fieldset-information__icon-wrapper {
-      color: $tiffany-link;
       opacity: 1;
+      color: $tiffany-link;
     }
   }
 
