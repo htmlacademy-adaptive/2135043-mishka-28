@@ -358,6 +358,7 @@
 .main-navigation--nojs .main-navigation__wrapper {
   position: static;
   min-height: 0;
+  transform: none;
 }
 
 .main-navigation--nojs .main-navigation__wrapper::after {

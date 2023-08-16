@@ -132,14 +132,14 @@
         min-height: 24px;
         left: 0;
         bottom: -12px;
-        background: url("../img/stack.svg#zigzag-hero-tablet") no-repeat center center / cover;
+        background: url("../img/stack.svg#zigzag-title-tablet") no-repeat center center / cover;
         z-index: 2;
       }
     }
 
     @media (min-width: $desktop-width) {
       &::after {
-        background: url("../img/stack.svg#zigzag-hero-desktop") no-repeat center center / contain;
+        background: url("../img/stack.svg#zigzag-title-desktop") no-repeat center center / cover;
         height: 34px;
         bottom: -17px;
       }

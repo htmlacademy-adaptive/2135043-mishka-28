@@ -13,11 +13,17 @@
 
   @media (min-width: $tablet-width) {
     border-bottom: none;
+    background: linear-gradient(to bottom, $white 58%, rgba($color: $light-gray, $alpha: 0.25) 58%);
+
+    &--background-dark {
+      background: linear-gradient(to bottom, $white 58%, $gray 58%);
+    }
   }
 }
 
 .main-header__wrapper {
   width: 100%;
+  max-width: 1150px;
   min-height: 80px;
   margin: 0 auto;
   display: flex;

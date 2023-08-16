@@ -40,7 +40,7 @@
 
     &--zigzag {
       &::after {
-        background: url("../img/stack.svg#zigzag-hero-desktop") no-repeat center center / contain;
+        background: url("../img/stack.svg#zigzag-hero-desktop") no-repeat center center / cover;
         height: 34px;
         bottom: -17px;
       }
@@ -61,6 +61,8 @@
   }
 
   @media (min-width: $tablet-width) {
+    max-width: 1150px;
+    margin: 0 auto;
     gap: 260px;
   }
 }
@@ -114,7 +116,6 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  gap: 84px;
   justify-content: space-between;
   min-width: 320px;
   min-height: 103px;
@@ -147,13 +148,11 @@
     min-width: 334px;
     max-width: 334px;
     min-height: 119px;
-    gap: 80px;
     padding: 25px 33px 27px 36px;
   }
 
   @media (min-width: $desktop-width) {
     min-width: 525px;
-    gap: 270px;
     padding: 25px 35px 27px 36px;
   }
 }
