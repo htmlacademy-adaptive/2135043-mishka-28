@@ -4,7 +4,7 @@
 
 .advantages__wrapper {
   width: 100%;
-  padding: 37px 30px 14px 24px;
+  padding: 37px 30px 13px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -39,6 +39,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    max-width: 1150px;
+    margin: 0 auto;
     padding: 91px 250px 57px 225px;
     gap: 39px;
 
@@ -77,6 +79,7 @@
 
   @media (min-width: $desktop-width) {
     gap: 54px 33px;
+    margin: 0 auto;
   }
 }
 
